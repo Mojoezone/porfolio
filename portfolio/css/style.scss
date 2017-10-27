@@ -1,0 +1,206 @@
+//...................................var.................................
+$myColor: #4A606E;
+$mainColor: #95989A;
+$textWhite: #e4e4e4;
+
+//.............................universal css.............................
+.clearfix:after {
+    content: " ";
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+//..............................css...........................
+body {
+    font-family: 'Monda', sans-serif;
+}
+
+//......................header.............................
+header {
+    padding: 1em 1.5em;
+    width: 100%;
+    height: 6.25em;
+    border-bottom: 1px solid $myColor;
+}
+
+#myLogo {
+    float: left;
+    margin: 0;
+}
+
+
+#mobileMenu {
+    color: $myColor;
+    float: right;
+    font-size: 2em;
+    margin: 0;
+}
+
+#mainNavContainer {
+    display: none;
+}
+
+//....................mobile navigation nav is open.................
+.mobileOpen {
+    color: $mainColor;
+    width: 100%;
+    height: 100%;
+    background-color: $myColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5em;
+
+    #mobileClose {
+        font-size: 1.5em;
+        float: right;
+    }
+    .fadedLogo {
+        float: left;
+    }
+    .mainNav {
+        margin: 7em 0 3em 0;
+        clear: both;
+    }
+    .mainNav li {
+        padding: .5em 1em;
+    }
+    .mainNav li a {
+        font-size: 1.5em;
+        color: $mainColor;
+    }
+    .openSubNav{
+        font-size: 1.5em;
+        padding-left: 1em;
+    }
+    .subNav {
+        display: none;
+        font-size: .8em;
+        margin: 0;
+    } 
+    //........................nav li hover effects and active.............
+    .mainNav li a.active {
+        border-bottom: 1px solid $mainColor;
+    }
+    .mainNav li a:hover {
+        color: $textWhite;
+        border-bottom: 1px solid $textWhite;
+    }
+}
+
+
+//...............................end header.........................
+//..................................fontello ...............................................
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?36130799');
+    src: url('../font/fontello.eot?36130799#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff2?36130799') format('woff2'),
+    url('../font/fontello.woff?36130799') format('woff'),
+    url('../font/fontello.ttf?36130799') format('truetype'),
+    url('../font/fontello.svg?36130799#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?36130799#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before {
+    content: '\e800';
+}
+
+/* '' */
+
+.icon-cancel:before {
+    content: '\e801';
+}
+
+/* '' */
+
+.icon-up-open:before {
+    content: '\e802';
+}
+
+/* '' */
+
+.icon-menu:before {
+    content: '\f0c9';
+}
+
+/* '' */
+
+.icon-mail-alt:before {
+    content: '\f0e0';
+}
+
+/* '' */
+
+.icon-codeopen:before {
+    content: '\f1cb';
+}
+
+/* '' */
+
+.icon-github-squared:before {
+    content: '\f300';
+}
+
+/* '' */
+
+.icon-linkedin-squared:before {
+    content: '\f30c';
+}
+
+/* '' */
