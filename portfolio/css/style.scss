@@ -2,7 +2,16 @@
 $myColor: #4A606E;
 $mainColor: #95989A;
 $textWhite: #e4e4e4;
-
+.button{
+    background-color: $myColor;
+    color: $mainColor;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
 //.............................universal css.............................
 .clearfix:after {
     content: " ";
@@ -16,6 +25,7 @@ $textWhite: #e4e4e4;
 a {
     text-decoration: none;
 }
+
 
 //..............................css...........................
 body {
@@ -41,6 +51,8 @@ header {
     float: right;
     font-size: 2em;
     margin: 0;
+    cursor: pointer;
+    transition: all 1s easy-in-out;
 }
 
 #mainNavContainer {
@@ -56,47 +68,155 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1.5em;
+    padding: 1em 1.5em;
 
     #mobileClose {
-        font-size: 1.5em;
+        font-size: 2em;
         float: right;
+        cursor: pointer;
     }
     .fadedLogo {
         float: left;
     }
     .mainNav {
-        margin: 7em 0 3em 0;
+        margin: 8em 0 5em 0;
         clear: both;
     }
     .mainNav li {
         padding: .5em 1em;
     }
     .mainNav li a {
+        font-weight: 700;
+        line-height: 2em;
         font-size: 1.5em;
         color: $mainColor;
     }
-    .openSubNav{
+    #openSubNav {
         font-size: 1.5em;
         padding-left: 1em;
+        cursor: pointer;
+        transition: all .4s easy-in-out;
+    }
+    .rotateClass {
+        display: inline-block;
+        transform: rotate(90deg);
+        padding: 0 1em .2em 1em;
     }
     .subNav {
         display: none;
         font-size: .8em;
         margin: 0;
-    } 
-    //........................nav li hover effects and active.............
+        padding: 0;
+    }
+    .subNav li a {
+        padding: 0;
+        line-height: .5em;
+    }
+    .mailContainer {
+        text-align: center;
+        a {
+            color: $mainColor;
+        }
+    } //........................nav li hover effects and active.............
     .mainNav li a.active {
         border-bottom: 1px solid $mainColor;
     }
-    .mainNav li a:hover {
+    .mainNav li a:hover,
+    .icon-mail:hover {
         color: $textWhite;
         border-bottom: 1px solid $textWhite;
     }
 }
 
-
 //...............................end header.........................
+//...............................footer.........................
+footer {
+    border-top: 1px solid $myColor;
+    padding: 1em .5em;
+}
+
+.footerNav {
+    float: left;
+    padding-left: 0;
+    ul {
+        font-size: .9em;
+        padding-left: 0;
+        padding-left: .5em;
+        margin: 0;
+    }
+    a {
+        color: $mainColor;
+        transition: all .4s easy-in-out;
+    }
+    a:hover {
+        color: $myColor;
+        font-weight: 700;
+    }
+}
+
+.socialNav {
+    float: right;
+    li {
+        display: inline-block;
+        padding-left: .5em;
+        a {
+            font-size: 1.5em;
+            color: $mainColor;
+            transition: all .4s easy-in-out;
+        }
+        a:hover {
+            color: #000;
+        }
+    }
+}
+
+//.............copyright......
+.copyRight {
+    clear: both;
+    font-size: .6em;
+    color: $mainColor;
+}
+
+//..............toTop..............
+.toTop {
+    text-align: center;
+    transition: all .4s easy-in-out;
+    a {
+        color: $mainColor;
+        background-color: $myColor;
+        padding: 0 .8em;
+        @include border-radius(1em 1em 0 0);
+        transition: all .4s easy-in-out;
+    }
+    a:hover{
+        color: $textWhite;
+        box-shadow: 1px 3px 2px rgba($myColor, .5);
+    }
+}
+
+
+//...............................end footer.........................
+//...............................main home.........................
+main {
+    min-height: 30em;
+    .introContainer {
+        text-align: center;
+        h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 1.1em;
+        }
+    }
+}
+//........................moreButton............ 
+.moreButton{
+    @extend .button;
+    padding: .2em 1em;
+}
+
+//............................... end main home.........................
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';

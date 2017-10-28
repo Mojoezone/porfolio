@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.button, .moreButton {
+  background-color: #4A606E;
+  color: #95989A; }
+
 .clearfix:after {
   content: " ";
   clear: both; }
@@ -26,7 +30,9 @@ header {
   color: #4A606E;
   float: right;
   font-size: 2em;
-  margin: 0; }
+  margin: 0;
+  cursor: pointer;
+  transition: all 1s easy-in-out; }
 
 #mainNavContainer {
   display: none; }
@@ -39,32 +45,115 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1.5em; }
+  padding: 1em 1.5em; }
   .mobileOpen #mobileClose {
-    font-size: 1.5em;
-    float: right; }
+    font-size: 2em;
+    float: right;
+    cursor: pointer; }
   .mobileOpen .fadedLogo {
     float: left; }
   .mobileOpen .mainNav {
-    margin: 7em 0 3em 0;
+    margin: 8em 0 5em 0;
     clear: both; }
   .mobileOpen .mainNav li {
     padding: .5em 1em; }
   .mobileOpen .mainNav li a {
+    font-weight: 700;
+    line-height: 2em;
     font-size: 1.5em;
     color: #95989A; }
-  .mobileOpen .openSubNav {
+  .mobileOpen #openSubNav {
     font-size: 1.5em;
-    padding-left: 1em; }
+    padding-left: 1em;
+    cursor: pointer;
+    transition: all .4s easy-in-out; }
+  .mobileOpen .rotateClass {
+    display: inline-block;
+    transform: rotate(90deg);
+    padding: 0 1em .2em 1em; }
   .mobileOpen .subNav {
     display: none;
     font-size: .8em;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
+  .mobileOpen .subNav li a {
+    padding: 0;
+    line-height: .5em; }
+  .mobileOpen .mailContainer {
+    text-align: center; }
+    .mobileOpen .mailContainer a {
+      color: #95989A; }
   .mobileOpen .mainNav li a.active {
     border-bottom: 1px solid #95989A; }
-  .mobileOpen .mainNav li a:hover {
+  .mobileOpen .mainNav li a:hover,
+  .mobileOpen .icon-mail:hover {
     color: #e4e4e4;
     border-bottom: 1px solid #e4e4e4; }
+
+footer {
+  border-top: 1px solid #4A606E;
+  padding: 1em .5em; }
+
+.footerNav {
+  float: left;
+  padding-left: 0; }
+  .footerNav ul {
+    font-size: .9em;
+    padding-left: 0;
+    padding-left: .5em;
+    margin: 0; }
+  .footerNav a {
+    color: #95989A;
+    transition: all .4s easy-in-out; }
+  .footerNav a:hover {
+    color: #4A606E;
+    font-weight: 700; }
+
+.socialNav {
+  float: right; }
+  .socialNav li {
+    display: inline-block;
+    padding-left: .5em; }
+    .socialNav li a {
+      font-size: 1.5em;
+      color: #95989A;
+      transition: all .4s easy-in-out; }
+    .socialNav li a:hover {
+      color: #000; }
+
+.copyRight {
+  clear: both;
+  font-size: .6em;
+  color: #95989A; }
+
+.toTop {
+  text-align: center;
+  transition: all .4s easy-in-out; }
+  .toTop a {
+    color: #95989A;
+    background-color: #4A606E;
+    padding: 0 .8em;
+    -webkit-border-radius: 1em 1em 0 0;
+    -moz-border-radius: 1em 1em 0 0;
+    -ms-border-radius: 1em 1em 0 0;
+    border-radius: 1em 1em 0 0;
+    transition: all .4s easy-in-out; }
+  .toTop a:hover {
+    color: #e4e4e4;
+    box-shadow: 1px 3px 2px rgba(74, 96, 110, 0.5); }
+
+main {
+  min-height: 30em; }
+  main .introContainer {
+    text-align: center; }
+    main .introContainer h2 {
+      font-size: 1.2em;
+      font-weight: 700; }
+    main .introContainer h3 {
+      font-size: 1.1em; }
+
+.moreButton {
+  padding: .2em 1em; }
 
 @font-face {
   font-family: 'fontello';
