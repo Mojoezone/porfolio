@@ -153,6 +153,10 @@ main {
       font-size: 1.1em; }
 
 .moreButton {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
   padding: .2em 1em; }
 
 @font-face {

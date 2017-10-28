@@ -213,6 +213,7 @@ main {
 //........................moreButton............ 
 .moreButton{
     @extend .button;
+    @include border-radius(5px);
     padding: .2em 1em;
 }
 
