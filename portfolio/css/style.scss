@@ -2,16 +2,18 @@
 $myColor: #4A606E;
 $mainColor: #95989A;
 $textWhite: #e4e4e4;
-.button{
+.button {
     background-color: $myColor;
     color: $mainColor;
 }
+
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
+
 //.............................universal css.............................
 .clearfix:after {
     content: " ";
@@ -59,6 +61,14 @@ header {
     display: none;
 }
 
+//...............sticky nav..............
+.stickyNav {
+    position: fixed;
+    top: 0;
+    background-color: $myColor;
+    transition: all .2s easy-in-out;
+}
+
 //....................mobile navigation nav is open.................
 .mobileOpen {
     color: $mainColor;
@@ -95,12 +105,16 @@ header {
         font-size: 1.5em;
         padding-left: 1em;
         cursor: pointer;
+    }
+    #openSubNav:hover{
+        color: $textWhite;
         transition: all .4s easy-in-out;
     }
     .rotateClass {
         display: inline-block;
         transform: rotate(90deg);
         padding: 0 1em .2em 1em;
+        transition: all .4s easy-in-out;
     }
     .subNav {
         display: none;
@@ -146,11 +160,11 @@ footer {
     }
     a {
         color: $mainColor;
-        transition: all .4s easy-in-out;
     }
     a:hover {
         color: $myColor;
         font-weight: 700;
+        transition: all .4s easy-in-out;
     }
 }
 
@@ -162,10 +176,10 @@ footer {
         a {
             font-size: 1.5em;
             color: $mainColor;
-            transition: all .4s easy-in-out;
         }
         a:hover {
             color: #000;
+            transition: all .4s easy-in-out;
         }
     }
 }
@@ -186,11 +200,11 @@ footer {
         background-color: $myColor;
         padding: 0 .8em;
         @include border-radius(1em 1em 0 0);
-        transition: all .4s easy-in-out;
     }
-    a:hover{
+    a:hover {
         color: $textWhite;
         box-shadow: 1px 3px 2px rgba($myColor, .5);
+        transition: all .4s easy-in-out;
     }
 }
 
@@ -198,23 +212,33 @@ footer {
 //...............................end footer.........................
 //...............................main home.........................
 main {
-    min-height: 30em;
+    min-height: 25em;
     .introContainer {
         text-align: center;
+        margin-top: 5em;
         h2 {
             font-size: 1.2em;
             font-weight: 700;
         }
         h3 {
             font-size: 1.1em;
+            letter-spacing: 3px;
+            padding-bottom: 1em;
         }
     }
 }
+
 //........................moreButton............ 
-.moreButton{
+.moreButton {
     @extend .button;
     @include border-radius(5px);
     padding: .2em 1em;
+}
+
+.moreButton:hover {
+    color: $textWhite;
+    box-shadow: 1px 3px 2px rgba($myColor, .5);
+    transition: all .2s easy-in-out;
 }
 
 //............................... end main home.........................

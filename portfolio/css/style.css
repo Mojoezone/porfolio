@@ -37,6 +37,12 @@ header {
 #mainNavContainer {
   display: none; }
 
+.stickyNav {
+  position: fixed;
+  top: 0;
+  background-color: #4A606E;
+  transition: all .2s easy-in-out; }
+
 .mobileOpen {
   color: #95989A;
   width: 100%;
@@ -65,12 +71,15 @@ header {
   .mobileOpen #openSubNav {
     font-size: 1.5em;
     padding-left: 1em;
-    cursor: pointer;
+    cursor: pointer; }
+  .mobileOpen #openSubNav:hover {
+    color: #e4e4e4;
     transition: all .4s easy-in-out; }
   .mobileOpen .rotateClass {
     display: inline-block;
     transform: rotate(90deg);
-    padding: 0 1em .2em 1em; }
+    padding: 0 1em .2em 1em;
+    transition: all .4s easy-in-out; }
   .mobileOpen .subNav {
     display: none;
     font-size: .8em;
@@ -103,11 +112,11 @@ footer {
     padding-left: .5em;
     margin: 0; }
   .footerNav a {
-    color: #95989A;
-    transition: all .4s easy-in-out; }
+    color: #95989A; }
   .footerNav a:hover {
     color: #4A606E;
-    font-weight: 700; }
+    font-weight: 700;
+    transition: all .4s easy-in-out; }
 
 .socialNav {
   float: right; }
@@ -116,10 +125,10 @@ footer {
     padding-left: .5em; }
     .socialNav li a {
       font-size: 1.5em;
-      color: #95989A;
-      transition: all .4s easy-in-out; }
+      color: #95989A; }
     .socialNav li a:hover {
-      color: #000; }
+      color: #000;
+      transition: all .4s easy-in-out; }
 
 .copyRight {
   clear: both;
@@ -136,21 +145,24 @@ footer {
     -webkit-border-radius: 1em 1em 0 0;
     -moz-border-radius: 1em 1em 0 0;
     -ms-border-radius: 1em 1em 0 0;
-    border-radius: 1em 1em 0 0;
-    transition: all .4s easy-in-out; }
+    border-radius: 1em 1em 0 0; }
   .toTop a:hover {
     color: #e4e4e4;
-    box-shadow: 1px 3px 2px rgba(74, 96, 110, 0.5); }
+    box-shadow: 1px 3px 2px rgba(74, 96, 110, 0.5);
+    transition: all .4s easy-in-out; }
 
 main {
-  min-height: 30em; }
+  min-height: 25em; }
   main .introContainer {
-    text-align: center; }
+    text-align: center;
+    margin-top: 5em; }
     main .introContainer h2 {
       font-size: 1.2em;
       font-weight: 700; }
     main .introContainer h3 {
-      font-size: 1.1em; }
+      font-size: 1.1em;
+      letter-spacing: 3px;
+      padding-bottom: 1em; }
 
 .moreButton {
   -webkit-border-radius: 5px;
@@ -158,6 +170,11 @@ main {
   -ms-border-radius: 5px;
   border-radius: 5px;
   padding: .2em 1em; }
+
+.moreButton:hover {
+  color: #e4e4e4;
+  box-shadow: 1px 3px 2px rgba(74, 96, 110, 0.5);
+  transition: all .2s easy-in-out; }
 
 @font-face {
   font-family: 'fontello';
