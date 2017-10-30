@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+    include_once('functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 

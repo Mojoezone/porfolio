@@ -1,5 +1,6 @@
 <?php
 include("header.php");
+include("contactParse.php");
 ?>
 
     <main>
@@ -10,10 +11,16 @@ include("header.php");
            </a>
            </div>
            
-           <form ></form>
+           <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+               <input type="text" name="name" placeholder="Name" autofocus  >
+               <input type="text" name="email" placeholder="Email"  >
+               <textarea name="comment" maxlength="1000" placeholder="Message me......"></textarea>
+               <input class="button" type="submit" name="submit" value="Send">
+               <input type="hidden" name="did_send" value="1">
+            </form>
         </div>
 
-    </main>
+    </main> 
 
  <?php
 include("footer.php");

@@ -106,7 +106,7 @@ header {
         padding-left: 1em;
         cursor: pointer;
     }
-    #openSubNav:hover{
+    #openSubNav:hover {
         color: $textWhite;
         transition: all .4s easy-in-out;
     }
@@ -229,6 +229,10 @@ main {
 }
 
 //........................moreButton............ 
+.mBContainer {
+    margin-top: 3em;
+}
+
 .moreButton {
     @extend .button;
     @include border-radius(5px);
@@ -242,6 +246,56 @@ main {
 }
 
 //............................... end main home.........................
+//...................................contact............................
+.formContainer {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    padding-top: 5em;
+    .mailContainer {
+        margin-bottom: 3em;
+        a {
+            color: $myColor;
+        }
+    }
+    form {
+        font-size: 1em;
+        input,
+        textarea {
+            color: $mainColor;
+            border: none;
+            border-bottom: 1px solid $myColor;
+            width: 100%;
+        }
+        input,
+        textarea,
+        .button {
+            display: block;
+            padding: 1em 0 .5em 0;
+        }
+        textarea {
+            resize: none;
+            padding-bottom: 0;
+            height: 2.5em;
+        }
+        .button {
+            width: 5em;
+            border: none;
+            border-bottom: 1px solid $mainColor;
+            margin-top: 2em;
+            @extend .button;
+            @include border-radius(5px);
+            padding: .4em 1em;
+        }
+        .button:hover {
+            color: $textWhite;
+            box-shadow: 1px 1px 1px rgba($myColor, .5);
+            transition: all .2s easy-in-out;
+        }
+    }
+}
+
+//.................................end Contact.............................
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';
