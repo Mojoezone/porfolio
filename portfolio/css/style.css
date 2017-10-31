@@ -13,6 +13,12 @@
 a {
   text-decoration: none; }
 
+.button:hover, .moreButton:hover, .formContainer form .button:hover,
+.moreButton:hover {
+  color: #e4e4e4;
+  box-shadow: 1px 1px 1px rgba(74, 96, 110, 0.5);
+  transition: all .2s easy-in-out; }
+
 body {
   font-family: 'Monda', sans-serif; }
 
@@ -174,11 +180,6 @@ main {
   border-radius: 5px;
   padding: .2em 1em; }
 
-.moreButton:hover {
-  color: #e4e4e4;
-  box-shadow: 1px 3px 2px rgba(74, 96, 110, 0.5);
-  transition: all .2s easy-in-out; }
-
 .formContainer {
   width: 80%;
   margin: 0 auto;
@@ -197,9 +198,11 @@ main {
       border-bottom: 1px solid #95989A;
       width: 100%;
       transition: all .5s ease; }
-    .formContainer form input::placeholder, .formContainer form textarea::placeholder {
+    .formContainer form input::placeholder,
+    .formContainer form textarea::placeholder {
       color: #95989A; }
-    .formContainer form input:focus, .formContainer form textarea:focus {
+    .formContainer form input:focus,
+    .formContainer form textarea:focus {
       outline: none;
       border-bottom: 1px solid #4A606E; }
     .formContainer form textarea:focus {
@@ -224,13 +227,34 @@ main {
       -ms-border-radius: 5px;
       border-radius: 5px;
       padding: .4em 1em; }
-    .formContainer form .moreButton:hover, .formContainer form .button:hover {
-      color: #e4e4e4;
-      box-shadow: 1px 1px 1px rgba(74, 96, 110, 0.5);
-      transition: all .2s easy-in-out; }
 
 .feedBack {
   color: #4A606E; }
+
+.aboutContainer {
+  padding: 3em 0;
+  width: 80%;
+  margin: 0 auto; }
+  .aboutContainer blockquote {
+    font-size: 1.125em;
+    color: #4A606E; }
+  .aboutContainer .aboutSummery {
+    margin: 6em 0; }
+    .aboutContainer .aboutSummery p {
+      margin-bottom: 3em; }
+    .aboutContainer .aboutSummery .button, .aboutContainer .aboutSummery .moreButton {
+      text-align: center;
+      padding: .5em 0;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+    .aboutContainer .aboutSummery .button:active, .aboutContainer .aboutSummery .moreButton:active {
+      width: 7.5em;
+      margin: 0 auto;
+      transition: all 2s ease-in-out; }
+  .aboutContainer .resume .aniResume {
+    display: none; }
 
 @font-face {
   font-family: 'fontello';
