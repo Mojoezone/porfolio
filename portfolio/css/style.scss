@@ -262,10 +262,21 @@ main {
         font-size: 1em;
         input,
         textarea {
-            color: $mainColor;
+            color: $myColor;
             border: none;
-            border-bottom: 1px solid $myColor;
+            border-bottom: 1px solid $mainColor;
             width: 100%;
+            transition: all .5s ease;
+        }
+        input::placeholder, textarea::placeholder{
+            color: $mainColor;
+        }
+        input:focus, textarea:focus{
+            outline: none;
+            border-bottom: 1px solid $myColor;
+        }
+        textarea:focus{
+            height: 8em;
         }
         input,
         textarea,

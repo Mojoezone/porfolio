@@ -192,10 +192,18 @@ main {
     font-size: 1em; }
     .formContainer form input,
     .formContainer form textarea {
-      color: #95989A;
+      color: #4A606E;
       border: none;
-      border-bottom: 1px solid #4A606E;
-      width: 100%; }
+      border-bottom: 1px solid #95989A;
+      width: 100%;
+      transition: all .5s ease; }
+    .formContainer form input::placeholder, .formContainer form textarea::placeholder {
+      color: #95989A; }
+    .formContainer form input:focus, .formContainer form textarea:focus {
+      outline: none;
+      border-bottom: 1px solid #4A606E; }
+    .formContainer form textarea:focus {
+      height: 8em; }
     .formContainer form input,
     .formContainer form textarea,
     .formContainer form .moreButton,
@@ -220,6 +228,9 @@ main {
       color: #e4e4e4;
       box-shadow: 1px 1px 1px rgba(74, 96, 110, 0.5);
       transition: all .2s easy-in-out; }
+
+.feedBack {
+  color: #4A606E; }
 
 @font-face {
   font-family: 'fontello';
