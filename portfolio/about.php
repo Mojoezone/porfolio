@@ -13,7 +13,7 @@ include('header.php');
             <p>I am a Chinese born American live in San Diego California with a serious face and open minded.</p>
             <div id="resumeTrigger" class="button">Go to Resume</div>
         </div>
-        <div id="resumeContainer" class="resume">
+        <div id="resumeContainer">
             <div class="aniResume">
                 <h4>Education:</h4>
                 <ul>

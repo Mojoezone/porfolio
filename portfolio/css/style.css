@@ -237,24 +237,27 @@ main {
   margin: 0 auto; }
   .aboutContainer blockquote {
     font-size: 1.125em;
-    color: #4A606E; }
+    color: #95989A; }
   .aboutContainer .aboutSummery {
     margin: 6em 0; }
     .aboutContainer .aboutSummery p {
-      margin-bottom: 3em; }
+      margin-bottom: 3em;
+      font-size: 1.125em;
+      color: #4A606E; }
     .aboutContainer .aboutSummery .button, .aboutContainer .aboutSummery .moreButton {
       text-align: center;
       padding: .5em 0;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
-      border-radius: 4px; }
-    .aboutContainer .aboutSummery .button:active, .aboutContainer .aboutSummery .moreButton:active {
-      width: 7.5em;
-      margin: 0 auto;
-      transition: all 2s ease-in-out; }
-  .aboutContainer .resume .aniResume {
-    display: none; }
+      border-radius: 4px;
+      cursor: pointer; }
+  .aboutContainer #resumeContainer {
+    padding-top: 3em; }
+    .aboutContainer #resumeContainer li {
+      color: #4A606E; }
+      .aboutContainer #resumeContainer li p {
+        color: #95989A; }
 
 @font-face {
   font-family: 'fontello';

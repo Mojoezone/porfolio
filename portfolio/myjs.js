@@ -108,24 +108,8 @@
          }
      }
      //...................animation resume in about page............
-     var resumeTrigger = document.getElementById("resumeTrigger");
-     var resumeContainer = document.getElementById("resumeContainer");
-     var aniResume = resumeContainer.querySelectorAll(".aniResume");
-     
-     resumeTrigger.addEventListener("click", function(){
-         aniResume.style.display = "block";
-     });
-     
-     function loopResume(){
-         for(var i = 0; i < aniResume.length; i++){
-             var aniSection = aniResume[i];
-         }
-     }
-     function animationResume(){
-         var current = aniResume[0];
-         var count = 0;
-     }
-     
+
+    
      
 
  })();

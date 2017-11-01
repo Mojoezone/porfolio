@@ -315,32 +315,39 @@ main {
     margin: 0 auto;
     blockquote {
         font-size: 1.125em;
-        color: $myColor;
+        color: $mainColor;
     }
     .aboutSummery {
         margin: 6em 0;
         p {
             margin-bottom: 3em;
+            font-size: 1.125em;
+            color: $myColor;
         }
         .button {
             text-align: center;
             padding: .5em 0;
             @include border-radius(4px);
+            cursor: pointer;
         }
-        .button:active {
-            width: 7.5em;
-            margin: 0 auto;
-            transition: all 2s ease-in-out;
-        }
-
+//        .button:active {
+//            width: 7.5em;
+//            margin: 0 auto;
+//            transition: all 2s ease-in-out;
+//        }
     }
-    .resume {
-        .aniResume {
-            display: none;
+    #resumeContainer{
+        padding-top: 3em;
+        li{
+            color: $myColor;
+            p{
+                color: $mainColor;
+            }
         }
     }
 }
 
+ 
 //................................end about me.........................
 //..................................fontello ...............................................
 @font-face {
