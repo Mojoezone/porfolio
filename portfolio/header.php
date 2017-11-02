@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 require('db-config.php');
-    include_once('functions.php');
+include_once('functions.php');
 ?>
     <!DOCTYPE html>
     <html lang="en">

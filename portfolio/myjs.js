@@ -20,6 +20,7 @@
      //................even hanndler.............
 
      //..........browser width for media query......
+     
 
      var winWidth;
      var winHeight;
@@ -107,9 +108,8 @@
              return "Good Morning!";
          }
      }
-     //...................animation resume in about page............
-
-    
+     //....................end year and greeting.....
      
+     //...................animation resume in about page............   
 
  })();
