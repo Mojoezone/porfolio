@@ -50,7 +50,6 @@
 
 
 </script>
-<!--
 <script>
     var resumeTrigger = document.getElementById("resumeTrigger");
     var resumeContainer = document.getElementById("resumeContainer");
@@ -74,7 +73,6 @@
     }
 
 </script>
--->
 </body>
 
 </html>
