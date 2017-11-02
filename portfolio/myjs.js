@@ -110,6 +110,7 @@
      }
      //....................end year and greeting.....
      
+     
      //...................animation resume in about page............   
 
  })();

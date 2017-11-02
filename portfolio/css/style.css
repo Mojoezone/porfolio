@@ -259,6 +259,11 @@ main {
       .aboutContainer #resumeContainer li p {
         color: #95989A; }
 
+.portfolioContainer {
+  width: 100%; }
+  .portfolioContainer h3 img {
+    width: 100%; }
+
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?36130799");
