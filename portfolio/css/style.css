@@ -26,7 +26,8 @@ header {
   padding: 1em 1.5em;
   width: 100%;
   height: 6.25em;
-  border-bottom: 1px solid #4A606E; }
+  border-bottom: 1px solid #4A606E;
+  transition: all .5s ease-in-out; }
 
 #myLogo {
   float: left;
@@ -259,10 +260,37 @@ main {
       .aboutContainer #resumeContainer li p {
         color: #95989A; }
 
-.portfolioContainer {
-  width: 100%; }
-  .portfolioContainer h3 img {
-    width: 100%; }
+.portfolioContainer .plogoContainer {
+  width: 100%;
+  background-color: #4A606E;
+  margin: 5em 0; }
+  .portfolioContainer .plogoContainer h3 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0;
+    text-align: center;
+    background-color: #95989A; }
+    .portfolioContainer .plogoContainer h3 a {
+      font-size: 1.5em;
+      color: #4A606E; }
+      .portfolioContainer .plogoContainer h3 a img {
+        width: 100%;
+        height: auto; }
+.portfolioContainer .plogoContainer:nth-child(even) h3 {
+  padding: 3em 0; }
+  .portfolioContainer .plogoContainer:nth-child(even) h3 img {
+    height: 2.5em; }
+.portfolioContainer .plogoContainer:nth-child(3) h3 {
+  padding: 4em 0; }
+
+.projectContainer .pTitleContainer h2 {
+  background-color: #4A606E; }
+.projectContainer .pTitleContainer .singlePIMG {
+  width: 70%;
+  margin: 0 auto; }
+  .projectContainer .pTitleContainer .singlePIMG img {
+    width: 100%;
+    height: auto; }
 
 @font-face {
   font-family: 'fontello';

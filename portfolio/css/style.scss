@@ -46,6 +46,7 @@ header {
     width: 100%;
     height: 6.25em;
     border-bottom: 1px solid $myColor;
+    transition: all .5s ease-in-out;
 }
 
 #myLogo {
@@ -350,13 +351,60 @@ main {
 //................................end about me.........................
 //....................................portfolio page........................
 .portfolioContainer{
-    width: 100%;
+    .plogoContainer{
+        width: 100%;
+        background-color: $myColor;
+        margin: 5em 0;
     h3{
+        width: 80%;
+            margin: 0 auto; 
+        padding: 1em 0;
+        text-align: center;
+           background-color: $mainColor;
+        a{
+            font-size: 1.5em;
+           color: $myColor;
+           
         img{
-           width: 100%; 
+          width: 100%;
+            height: auto;
+        }
+            
+        }
+    }
+    }
+    .plogoContainer:nth-child(even){ 
+        h3{
+            padding: 3em 0;
+        img{
+                height: 2.5em;
+            }
+            }
+        }
+    .plogoContainer:nth-child(3){
+        h3{
+            padding: 4em 0;
         }
     }
 }
+//........................end portfolio ..................................
+//...........................single project....................................
+.projectContainer{
+    .pTitleContainer{
+        h2{
+        background-color: $myColor;
+    }
+         .singlePIMG{
+            width: 70%;
+            margin: 0 auto;
+             img{
+                 width: 100%;
+                 height: auto;
+             }
+        }
+    }
+}
+//............................end single project................................
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';
