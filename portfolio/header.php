@@ -24,30 +24,34 @@ include_once('functions.php');
                 <div><span id="mobileClose" class="icon-cancel"></span></div>
                 <ul class="mainNav">
                     <li>
-                        <a class="active" href="#">Home</a>
+                        <a class="active" href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a><span id="openSubNav">&#187;</span>
+                        <a href="portfolio.php">Portfolio</a><span id="openSubNav">&#187;</span>
                         <ul class="subNav">
+                           <?php 
+                            $query = "SELECT p_id, p_name
+                                      FROM projects";
+                            $result = $db->query($query);
+                            if($result->num_rows >= 1){
+                                while($row = $result->fetch_assoc()){
+                            
+                            ?>
                             <li>
-                                <a href="#">Fashion Family</a>
+                                <a href="project.php?p_id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a>
                             </li>
-                            <li>
-                                <a href="#">Shield</a>
-                            </li>
-                            <li>
-                                <a href="#">Goblin Exile</a>
-                            </li>
-                            <li>
-                                <a href="#">Bike Shop</a>
-                            </li>
+                         <?php
+                                }
+                             $result->free();   
+                            }
+                                    ?>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact.php">Contact</a>
                     </li>
                 </ul>
                 <div class="mailContainer"><a class="icon-mail" href="mailto:mojoezone@gmail.com">mojoezone@gmail.com</a></div>

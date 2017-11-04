@@ -4,7 +4,7 @@ $mainColor: #95989A;
 $textWhite: #e4e4e4;
 .button {
     background-color: $myColor;
-    color: $mainColor;
+    color: $textWhite;
 }
 
 @mixin border-radius($radius) {
@@ -30,7 +30,7 @@ a {
 
 .button:hover,
 .moreButton:hover {
-    color: $textWhite;
+    color: $mainColor;
     box-shadow: 1px 1px 1px rgba($myColor, .5);
     transition: all .2s easy-in-out;
 }
@@ -299,7 +299,7 @@ main {
             margin-top: 2em;
             @extend .button;
             @include border-radius(5px);
-            padding: .4em 1em;
+            padding: .5em 1em;
         }
     }
 }
@@ -320,6 +320,9 @@ main {
     }
     .aboutSummery {
         margin: 6em 0;
+        h3 {
+            color: $mainColor;
+        }
         p {
             margin-bottom: 3em;
             font-size: 1.125em;
@@ -331,18 +334,21 @@ main {
             @include border-radius(4px);
             cursor: pointer;
         }
-//        .button:active {
-//            width: 7.5em;
-//            margin: 0 auto;
-//            transition: all 2s ease-in-out;
-//        }
+        //        .button:active {
+        //            width: 7.5em;
+        //            margin: 0 auto;
+        //            transition: all 2s ease-in-out;
+        //        }
     }
-    #resumeContainer{
+    #resumeContainer {
         padding-top: 3em;
-        li{
-            color: $myColor;
-            p{
-                color: $mainColor;
+        h4 {
+            color: $mainColor;
+        }
+        li {
+            color: $mainColor;
+            p {
+                color: $myColor;
             }
         }
     }
@@ -350,60 +356,121 @@ main {
 
 //................................end about me.........................
 //....................................portfolio page........................
-.portfolioContainer{
-    .plogoContainer{
+.portfolioContainer {
+    .plogoContainer {
         width: 100%;
         background-color: $myColor;
         margin: 5em 0;
-    h3{
-        width: 80%;
-            margin: 0 auto; 
-        padding: 1em 0;
         text-align: center;
-           background-color: $mainColor;
-        a{
-            font-size: 1.5em;
-           color: $myColor;
-           
-        img{
-          width: 100%;
-            height: auto;
-        }
-            
+        h3 {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1em 0;
+            background-color: $mainColor;
+            a {
+                font-size: 1.5em;
+                color: $myColor;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
         }
     }
-    }
-    .plogoContainer:nth-child(even){ 
-        h3{
+    .plogoContainer:nth-child(even) {
+        h3 {
             padding: 3em 0;
-        img{
+            img {
                 height: 2.5em;
             }
-            }
         }
-    .plogoContainer:nth-child(3){
-        h3{
+    }
+    .plogoContainer:nth-child(3) {
+        h3 {
             padding: 4em 0;
         }
     }
+    .pLanguage {
+        font-size: .9em;
+        color: $textWhite;
+        line-height: 2em;
+    }
 }
+
 //........................end portfolio ..................................
 //...........................single project....................................
-.projectContainer{
-    .pTitleContainer{
-        h2{
-        background-color: $myColor;
-    }
-         .singlePIMG{
+.projectContainer {
+    .pTitleContainer {
+        h2 {
+            line-height: 3em;
+            color: $mainColor;
+            text-align: center;
+            background-color: $myColor;
+            img[src="images/bikeshop.svg"], img[src="images/shield.svg"]{
+                width: 60%;
+                padding-top: 1em;
+            }
+        }
+        .singlePIMG {
             width: 70%;
             margin: 0 auto;
-             img{
-                 width: 100%;
-                 height: auto;
-             }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .pCaseStudy {
+        margin-top: 4em;
+        padding: 0 .8em;
+        h3 {
+            color: $mainColor;
+            margin-bottom: 0;
+            line-height: 3em;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 2em;
+            color: $myColor;
+        }
+    }
+    .buttonContainer {
+        text-align: center;
+        .button {
+            padding: .5em 1em;
+            @include border-radius(5px);
         }
     }
 }
+
+.otherProjects {
+    background-color: $mainColor;
+    padding: 2em 0;
+    margin: 6em 0 2em 0;
+    text-align: center;
+    .otherProject {
+        width: 80%;
+        background-color: $myColor;
+        margin: 0 auto;
+        @include border-radius(12px);
+        h3 {
+            margin-bottom: 0;
+            img {
+                width: 100%;
+                box-shadow: 1px 1px 2px $myColor;
+                @include border-radius(13px);
+            }
+        }
+        p {
+            margin-top: 0;
+            color: $mainColor;
+            padding-bottom: .5em;
+        }
+    }
+}
+
 //............................end single project................................
 //..................................fontello ...............................................
 @font-face {

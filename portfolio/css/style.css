@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .button, .moreButton, .formContainer form .button {
   background-color: #4A606E;
-  color: #95989A; }
+  color: #e4e4e4; }
 
 .clearfix:after {
   content: " ";
@@ -15,7 +15,7 @@ a {
 
 .button:hover, .moreButton:hover, .formContainer form .button:hover,
 .moreButton:hover {
-  color: #e4e4e4;
+  color: #95989A;
   box-shadow: 1px 1px 1px rgba(74, 96, 110, 0.5);
   transition: all .2s easy-in-out; }
 
@@ -227,7 +227,7 @@ main {
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;
       border-radius: 5px;
-      padding: .4em 1em; }
+      padding: .5em 1em; }
 
 .feedBack {
   color: #4A606E; }
@@ -241,6 +241,8 @@ main {
     color: #95989A; }
   .aboutContainer .aboutSummery {
     margin: 6em 0; }
+    .aboutContainer .aboutSummery h3 {
+      color: #95989A; }
     .aboutContainer .aboutSummery p {
       margin-bottom: 3em;
       font-size: 1.125em;
@@ -255,20 +257,22 @@ main {
       cursor: pointer; }
   .aboutContainer #resumeContainer {
     padding-top: 3em; }
+    .aboutContainer #resumeContainer h4 {
+      color: #95989A; }
     .aboutContainer #resumeContainer li {
-      color: #4A606E; }
+      color: #95989A; }
       .aboutContainer #resumeContainer li p {
-        color: #95989A; }
+        color: #4A606E; }
 
 .portfolioContainer .plogoContainer {
   width: 100%;
   background-color: #4A606E;
-  margin: 5em 0; }
+  margin: 5em 0;
+  text-align: center; }
   .portfolioContainer .plogoContainer h3 {
     width: 80%;
     margin: 0 auto;
     padding: 1em 0;
-    text-align: center;
     background-color: #95989A; }
     .portfolioContainer .plogoContainer h3 a {
       font-size: 1.5em;
@@ -282,15 +286,71 @@ main {
     height: 2.5em; }
 .portfolioContainer .plogoContainer:nth-child(3) h3 {
   padding: 4em 0; }
+.portfolioContainer .pLanguage {
+  font-size: .9em;
+  color: #e4e4e4;
+  line-height: 2em; }
 
 .projectContainer .pTitleContainer h2 {
+  line-height: 3em;
+  color: #95989A;
+  text-align: center;
   background-color: #4A606E; }
+  .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"], .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
+    width: 60%;
+    padding-top: 1em; }
 .projectContainer .pTitleContainer .singlePIMG {
   width: 70%;
   margin: 0 auto; }
   .projectContainer .pTitleContainer .singlePIMG img {
     width: 100%;
     height: auto; }
+.projectContainer .pCaseStudy {
+  margin-top: 4em;
+  padding: 0 .8em; }
+  .projectContainer .pCaseStudy h3 {
+    color: #95989A;
+    margin-bottom: 0;
+    line-height: 3em; }
+  .projectContainer .pCaseStudy p {
+    margin-top: 0;
+    margin-bottom: 2em;
+    color: #4A606E; }
+.projectContainer .buttonContainer {
+  text-align: center; }
+  .projectContainer .buttonContainer .button, .projectContainer .buttonContainer .moreButton {
+    padding: .5em 1em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px; }
+
+.otherProjects {
+  background-color: #95989A;
+  padding: 2em 0;
+  margin: 6em 0 2em 0;
+  text-align: center; }
+  .otherProjects .otherProject {
+    width: 80%;
+    background-color: #4A606E;
+    margin: 0 auto;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px; }
+    .otherProjects .otherProject h3 {
+      margin-bottom: 0; }
+      .otherProjects .otherProject h3 img {
+        width: 100%;
+        box-shadow: 1px 1px 2px #4A606E;
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        -ms-border-radius: 13px;
+        border-radius: 13px; }
+    .otherProjects .otherProject p {
+      margin-top: 0;
+      color: #95989A;
+      padding-bottom: .5em; }
 
 @font-face {
   font-family: 'fontello';

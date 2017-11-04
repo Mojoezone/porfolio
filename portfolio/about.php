@@ -31,9 +31,10 @@ include('header.php');
             <div class="aniResume">
                 <h4>Skills:</h4>
                 <ul>
-                    <li>HTML, CSS, Bootscrap 4, Responsive</li>
-                    <li>Familliar with
-                        <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, UI and UX</p>
+                    <li>Expert</li>
+                    <p>HTML, CSS, Responsive</p>
+                    <li>Familliar
+                        <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, Bootscrap 4, UI and UX</p>
                     </li>
                     <li>Experienced
                         <p>Node, XML, FTL</p>

@@ -9,7 +9,7 @@ function test_input($data){
 function portfolio(){
      global $db;
     global $p_id;
-        $query = "SELECT p_id, p_logo, p_name
+        $query = "SELECT p_id, p_logo, p_name, p_language
                   FROM projects";
             
         $result = $db->query($query);
@@ -19,14 +19,16 @@ function portfolio(){
        ?>
             <?php 
                 echo '<div class="plogoContainer"><h3>
-        <a href="project.php?p_id='.$row['p_id'].'">'.$row['p_name'].'</a></h3></div>'; 
+        <a href="project.php?p_id='.$row['p_id'].'">'.$row['p_name'].'</a></h3><p class="pLanguage">'.$row['p_language'].'</P></div>'; 
            }else{ 
                echo '<div class="plogoContainer"><h3>
-        <a href="project.php?p_id='.$row['p_id'].'"><img src="'.$row['p_logo'].'" alt="'.$row['p_name'].'" ></a></h3></div>'; 
+        <a href="project.php?p_id='.$row['p_id'].'"><img src="'.$row['p_logo'].'" alt="'.$row['p_name'].'" ></a></h3><p class="pLanguage">'.$row['p_language'].'</P></div>'; 
             ?>
     <?php
      }
- }      }
+ }   
+            $result->free();
+        }
 }
 
 function project(){
@@ -72,8 +74,10 @@ function project(){
         <p>'.$row['p_solutions'].'</p>
         
     </div>'?>
-    <a class="button" href="<?php echo $row['p_url']; ?>" target="_blank">Checkout the live site</a>
+    <div class="buttonContainer"><a class="button" href="<?php echo $row['p_url']; ?>" target="_blank">Checkout the live site</a></div>
+    
 <?php
         }
+        $result->free();
 }
 }
