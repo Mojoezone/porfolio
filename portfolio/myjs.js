@@ -24,7 +24,7 @@
      //................even hanndler.............
 
      //..........browser width for media query......
-     
+
 
      var winWidth;
      var winHeight;
@@ -34,9 +34,9 @@
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight;
          mainNavContainer.remove("tabletOpen");
-             document.getElementById("mainNavContainer").style.display = "none";
+         document.getElementById("mainNavContainer").style.display = "none";
          bodyTag.remove("bodyWidth");
-             mobileMenu.style.display = "block";
+         mobileMenu.style.display = "block";
      });
      //......resize only check when resizing the browser and load will check as page load..
      window.addEventListener("load", function () {
@@ -70,19 +70,19 @@
      //..............end checking width............
      mobileMenu.addEventListener("click", function () {
          if (winWidth >= 1280) {
-             
-         }else if(winWidth <= 1280 && winWidth >= 768){
+
+         } else if (winWidth <= 1280 && winWidth >= 768) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.add("tabletOpen");
              document.getElementById("mainNavContainer").style.display = "block";
              bodyTag.add("bodyWidth");
              mobileMenu.style.display = "none";
-         }else{
-             mainNavContainer.remove("tabletOpen");     
+         } else {
+             mainNavContainer.remove("tabletOpen");
              mainNavContainer.add("mobileOpen");
              document.getElementById("mainNavContainer").style.display = "block";
          }
-         
+
 
      });
 
@@ -95,35 +95,35 @@
          bodyTag.remove("bodyWidth");
          mobileMenu.style.display = "block";
      });
-     
-     
-     
+
+
+
      //..............submenu................
-     function toggleMenu(event){
-    if(!this.classList.contains('rotateClass')){
-        this.classList.add('rotateClass');
-         subNav.style.display = "block";
-         document.getElementById("openSubNav").style.color = "#e4e4e4";
-    }else{
-         subNav.style.display = "none";
-        openSubNav.classList.remove("rotateClass");
-        document.getElementById("openSubNav").style.color = "#95989A";
-    }
-    event.preventDefault();
-}
+     function toggleMenu(event) {
+         if (!this.classList.contains('rotateClass')) {
+             this.classList.add('rotateClass');
+             subNav.style.display = "block";
+             document.getElementById("openSubNav").style.color = "#e4e4e4";
+         } else {
+             subNav.style.display = "none";
+             openSubNav.classList.remove("rotateClass");
+             document.getElementById("openSubNav").style.color = "#95989A";
+         }
+         event.preventDefault();
+     }
 
      openSubNav.addEventListener('click', toggleMenu, false);
-//     openSubNav.addEventListener("click", function () {
-//         if (subNav.style.display == "block") {
-//             subNav.style.display = "none";
-//             openSubNav.classList.remove("rotateClass");
-//             document.getElementById("openSubNav").style.color = "#95989A";
-//         } else {
-//             subNav.style.display = "block";
-//             openSubNav.classList.add("rotateClass");
-//             document.getElementById("openSubNav").style.color = "#e4e4e4";
-//         }
-//     });
+     //     openSubNav.addEventListener("click", function () {
+     //         if (subNav.style.display == "block") {
+     //             subNav.style.display = "none";
+     //             openSubNav.classList.remove("rotateClass");
+     //             document.getElementById("openSubNav").style.color = "#95989A";
+     //         } else {
+     //             subNav.style.display = "block";
+     //             openSubNav.classList.add("rotateClass");
+     //             document.getElementById("openSubNav").style.color = "#e4e4e4";
+     //         }
+     //     });
      //...............end mobile nav ................
 
      //..................copy right year and greeting...................
@@ -131,9 +131,9 @@
      var currentHours = currentDate.getHours();
      var currentYear = currentDate.getFullYear();
      var greeting = document.getElementById("greeting");
-     
-     if(greeting){
-     document.getElementById("greeting").innerHTML = checkHours();
+
+     if (greeting) {
+         document.getElementById("greeting").innerHTML = checkHours();
      }
      if (currentYear == 2017) {
          document.getElementById("currentYear").innerHTML = currentYear;
@@ -151,8 +151,8 @@
          }
      }
      //....................end year and greeting.....
-     
-     
+
+
      //...................animation resume in about page............   
 
  })();
