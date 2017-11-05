@@ -1,7 +1,11 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 require('db-config.php');
+$p_id = $_GET['p_id'];
 include_once('functions.php');
+$url = $_SERVER['PHP_SELF'];
+$urlName = basename($url);
+$urlName = basename($urlName, '.php');
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -9,7 +13,7 @@ include_once('functions.php');
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Joe Mo - Home</title>
+        <title>Joe Mo - <?php echo get_title();?></title>
         <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -24,10 +28,10 @@ include_once('functions.php');
                 <div><span id="mobileClose" class="icon-cancel"></span></div>
                 <ul class="mainNav">
                     <li>
-                        <a class="active" href="index.php">Home</a>
+                        <a class="<?php if($urlName == 'index'){echo 'active';} ?>" href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="portfolio.php">Portfolio</a><span id="openSubNav">&#187;</span>
+                        <a class="<?php if($urlName == 'portfolio'){echo 'active';} ?>" href="portfolio.php">Portfolio</a><span id="openSubNav">&#187;</span>
                         <ul class="subNav">
                            <?php 
                             $query = "SELECT p_id, p_name
@@ -38,7 +42,7 @@ include_once('functions.php');
                             
                             ?>
                             <li>
-                                <a href="project.php?p_id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a>
+                                <a  class="<?php if($p_id == $row['p_id']){echo 'active';} ?>" href="project.php?p_id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a>
                             </li>
                          <?php
                                 }
@@ -48,10 +52,10 @@ include_once('functions.php');
                         </ul>
                     </li>
                     <li>
-                        <a href="about.php">About</a>
+                        <a class="<?php if($urlName == 'about'){echo 'active';} ?>" href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a class="<?php if($urlName == 'contact'){echo 'active';} ?>" href="contact.php">Contact</a>
                     </li>
                 </ul>
                 <div class="mailContainer"><a class="icon-mail" href="mailto:mojoezone@gmail.com">mojoezone@gmail.com</a></div>

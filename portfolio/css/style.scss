@@ -15,7 +15,7 @@ $textWhite: #e4e4e4;
 }
 
 //.............................universal css.............................
-.clearfix:after {
+.clearfix{
     content: " ";
     clear: both;
 }
@@ -28,11 +28,21 @@ a {
     text-decoration: none;
 }
 
+
+
 .button:hover,
 .moreButton:hover {
     color: $mainColor;
     box-shadow: 1px 1px 1px rgba($myColor, .5);
-    transition: all .2s easy-in-out;
+}
+
+header ul.mainNav li a.active {
+    border-bottom: 1px solid $mainColor;
+}
+
+.footerNav a.active {
+    color: $myColor;
+    font-weight: 700;
 }
 
 //..............................css...........................
@@ -68,6 +78,7 @@ header {
     display: none;
 }
 
+//display none
 //...............sticky nav..............
 .stickyNav {
     position: fixed;
@@ -86,67 +97,75 @@ header {
     top: 0;
     left: 0;
     padding: 1em 1.5em;
+}
 
-    #mobileClose {
-        font-size: 2em;
-        float: right;
-        cursor: pointer;
-    }
-    .fadedLogo {
-        float: left;
-    }
-    .mainNav {
-        margin: 8em 0 5em 0;
-        clear: both;
-    }
-    .mainNav li {
-        padding: .5em 1em;
-    }
-    .mainNav li a {
-        font-weight: 700;
-        line-height: 2em;
-        font-size: 1.5em;
+#mobileClose {
+    font-size: 2em;
+    float: right;
+    cursor: pointer;
+}
+
+.fadedLogo {
+    float: left;
+}
+
+.mainNav {
+    margin: 0;
+    padding: 4em 0 4em 2em;
+    clear: both;
+}
+
+.mainNav li {
+    padding: .5em 1em;
+}
+
+.mainNav li a {
+    font-weight: 700;
+    line-height: 2em;
+    font-size: 1.5em;
+    color: $mainColor;
+}
+
+#openSubNav {
+    font-size: 1.5em;
+    padding-left: 1em;
+    cursor: pointer;
+    transition: all .4s easy-in-out;
+}
+
+#openSubNav:hover {
+    color: $textWhite;
+}
+
+.rotateClass {
+    display: inline-block;
+    transform: rotate(90deg);
+    padding: 0 1em .2em 1em;
+    transition: all .4s easy-in-out;
+}
+
+header .subNav {
+    display: none;
+    font-size: .8em;
+    margin: 0;
+    padding: 0;
+}
+
+header .subNav li a {
+    padding: 0;
+    line-height: .5em;
+}
+
+.mailContainer {
+//    text-align: center;
+    a {
         color: $mainColor;
     }
-    #openSubNav {
-        font-size: 1.5em;
-        padding-left: 1em;
-        cursor: pointer;
-    }
-    #openSubNav:hover {
-        color: $textWhite;
-        transition: all .4s easy-in-out;
-    }
-    .rotateClass {
-        display: inline-block;
-        transform: rotate(90deg);
-        padding: 0 1em .2em 1em;
-        transition: all .4s easy-in-out;
-    }
-    .subNav {
-        display: none;
-        font-size: .8em;
-        margin: 0;
-        padding: 0;
-    }
-    .subNav li a {
-        padding: 0;
-        line-height: .5em;
-    }
-    .mailContainer {
-        text-align: center;
-        a {
-            color: $mainColor;
-        }
-    } //........................nav li hover effects and active.............
-    .mainNav li a.active {
-        border-bottom: 1px solid $mainColor;
-    }
-    .mainNav li a:hover,
-    .icon-mail:hover {
-        color: $textWhite;
-        border-bottom: 1px solid $textWhite;
-    }
+} //........................nav li hover effects and active.............
+.mainNav li a:hover,
+.icon-mail:hover {
+    color: $textWhite;
+    border-bottom: 1px solid $textWhite;
 }
 
 //...............................end header.........................
@@ -159,6 +178,7 @@ footer {
 .footerNav {
     float: left;
     padding-left: 0;
+    font-weight: 700;
     ul {
         font-size: .9em;
         padding-left: 0;
@@ -167,11 +187,11 @@ footer {
     }
     a {
         color: $mainColor;
+        transition: all .4s easy-in-out;
     }
     a:hover {
         color: $myColor;
         font-weight: 700;
-        transition: all .4s easy-in-out;
     }
 }
 
@@ -183,10 +203,10 @@ footer {
         a {
             font-size: 1.5em;
             color: $mainColor;
+            transition: all .4s easy-in-out;
         }
         a:hover {
             color: #000;
-            transition: all .4s easy-in-out;
         }
     }
 }
@@ -207,11 +227,11 @@ footer {
         background-color: $myColor;
         padding: 0 .8em;
         @include border-radius(1em 1em 0 0);
+        transition: all .4s easy-in-out;
     }
     a:hover {
         color: $textWhite;
         box-shadow: 1px 3px 2px rgba($myColor, .5);
-        transition: all .4s easy-in-out;
     }
 }
 
@@ -244,6 +264,7 @@ main {
     @extend .button;
     @include border-radius(5px);
     padding: .2em 1em;
+    transition: all .2s easy-in-out;
 }
 
 //............................... end main home.........................
@@ -300,6 +321,7 @@ main {
             @extend .button;
             @include border-radius(5px);
             padding: .5em 1em;
+            transition: all .2s easy-in-out;
         }
     }
 }
@@ -333,8 +355,8 @@ main {
             padding: .5em 0;
             @include border-radius(4px);
             cursor: pointer;
-        }
-        //        .button:active {
+            transition: all .2s easy-in-out;
+        } //        .button:active {
         //            width: 7.5em;
         //            margin: 0 auto;
         //            transition: all 2s ease-in-out;
@@ -362,15 +384,16 @@ main {
         background-color: $myColor;
         margin: 5em 0;
         text-align: center;
+        padding-top: .5em;
         h3 {
             width: 80%;
             margin: 0 auto;
             padding: 1em 0;
             background-color: $mainColor;
+            margin-top: 1em;
             a {
                 font-size: 1.5em;
                 color: $myColor;
-
                 img {
                     width: 100%;
                     height: auto;
@@ -396,6 +419,7 @@ main {
         font-size: .9em;
         color: $textWhite;
         line-height: 2em;
+        padding-bottom: 1em;
     }
 }
 
@@ -408,7 +432,8 @@ main {
             color: $mainColor;
             text-align: center;
             background-color: $myColor;
-            img[src="images/bikeshop.svg"], img[src="images/shield.svg"]{
+            img[src="images/bikeshop.svg"],
+            img[src="images/shield.svg"] {
                 width: 60%;
                 padding-top: 1em;
             }
@@ -441,6 +466,7 @@ main {
         .button {
             padding: .5em 1em;
             @include border-radius(5px);
+             transition: all .2s easy-in-out;
         }
     }
 }
@@ -448,7 +474,7 @@ main {
 .otherProjects {
     background-color: $mainColor;
     padding: 2em 0;
-    margin: 6em 0 2em 0;
+    margin: 15em 0 2em 0;
     text-align: center;
     .otherProject {
         width: 80%;
@@ -464,6 +490,7 @@ main {
             }
         }
         p {
+            font-size: .9em;
             margin-top: 0;
             color: $mainColor;
             padding-bottom: .5em;
@@ -472,6 +499,149 @@ main {
 }
 
 //............................end single project................................
+//............................media query ..............................
+@media only screen and (min-width: 768px) {
+    //.................tablet menu..............
+    .tabletOpen {
+        color: $mainColor;
+        width: 30%;
+        height: 100%;
+        background-color: $myColor;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all .4s ease-in-out;
+        .fadedLogo {
+            display: none;
+        }
+        #mobileClose {
+            font-size: 1.3em;
+            padding: 1em 1.5em 0 0;
+        }
+        ul.mainNav {
+            padding-top: 5em;
+            padding-left: 0;
+            padding-left: 1em;
+            background-color: $myColor;
+        }
+        .mainNav li a {
+            font-size: 1.3em;
+        }
+        .mailContainer {
+            font-size: .9em;
+            background-color: $myColor;
+            padding: 0 0 100% 1em;
+        }
+
+    } //.......body width when tablet menu open.....
+    body{
+         transition: all .4s ease-in-out;
+    }
+    .bodyWidth {
+        width: 70%;
+    } //....................footer............
+    .footerNav {
+        width: 60%;
+    }
+    .footerNav > li {
+        display: inline-block;
+        padding-left: 1.5em;
+    }
+    .footerNav > li ul > li {
+        display: none;
+    }
+    //...social nav
+    .socialNav li{
+        padding-right: 1.5em;
+    }
+    //........copyright...
+    .copyRight{
+        padding-top: 3em;
+        text-align: center;
+    }
+    
+    //......main............
+    main{
+        min-height: 35em;
+    }
+    main .introContainer{
+        margin-top: 8em;
+        h3{
+            font-size: 1.3em;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+    }
+    //........aboutContainer.......
+    .aboutContainer{
+        margin-top: 8em;
+        blockquote{
+            font-size: 1.5em;
+        }
+        .aboutSummery{
+            margin-top: 10em;
+            #resumeTrigger{
+                margin-top: 3em;
+            }
+        }
+    }
+    //..............contact.........
+    .formContainer {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    padding-top: 8em;
+}
+    //.................portfolio............
+    .portfolioContainer{ 
+        margin: 8em 0;
+        .plogoContainer{
+        width: 45%;
+        float: left;
+        margin: 0 2.5% 5em 2.5%;
+            h3{
+                width: 100%;
+            img[src="images/fashionFamily.svg"]{
+                height: 5.1em;
+            }
+            }
+        }
+    }
+    //.................project.............
+    .projectContainer{
+        .pTitleContainer{
+            height: 26.5em;
+            background-color: $myColor;
+            h2{
+                 width: 50%;
+                 float: right;
+                 padding-top: 2em;
+                img[src="images/bikeshop.svg"], img[src="images/shield.svg"] {
+                    width: 50%;
+                }
+            }
+            .singlePIMG {
+                width: 50%;
+                float: left;
+                padding: 5% 2%;
+            }
+        }
+        .pCaseStudy{
+            padding: 4em 5%;
+        }
+    }
+    //.....................other project nav..............
+    .otherProjects{
+        .otherProject{
+            width: 25%;
+            float:left;
+            margin: 2em 4.1666%;
+            background-color: transparent;
+        }
+    }
+}
+
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';

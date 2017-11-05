@@ -1,11 +1,12 @@
 <?php
+// contact parse
 function test_input($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
-
+//portfolio 
 function portfolio(){
      global $db;
     global $p_id;
@@ -31,6 +32,7 @@ function portfolio(){
         }
 }
 
+//sing project
 function project(){
     global $db;
     global $p_id;
@@ -57,7 +59,7 @@ function project(){
 
     echo
    ' </div>
-    <div class="pCaseStudy">
+    <div class="pCaseStudy clearfix">
         <h3>Roll</h3>
         <p>'.$row['p_roll'].'</p>
         
@@ -80,4 +82,35 @@ function project(){
         }
         $result->free();
 }
+}
+
+//page title
+function get_title(){
+$path = $_SERVER['PHP_SELF'];
+    $file = basename($path);
+    $file = strtoupper(basename($path, '.php'));
+    
+    if($file == 'INDEX'){
+        echo 'HOME';
+    }elseif($file == 'PROJECT'){
+     getProjectName();
+    }else{
+        echo $file;
+    }
+    }
+//set the global $p_id before the function in header.php
+function getProjectName(){
+       global $db;
+        global $p_id;
+        $query = "SELECT p_id, p_name
+                FROM projects
+                WHERE p_id = $p_id
+                LIMIT 1";
+        $result = $db->query($query);
+        if($result->num_rows >= 1){
+        while($row = $result->fetch_assoc()){
+            echo $row['p_name'];
+        }
+        $result->free();
+        }
 }

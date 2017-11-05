@@ -7,13 +7,17 @@
      var mobileClose = document.getElementById("mobileClose");
      var openSubNav = document.getElementById("openSubNav");
      var subNav = document.getElementsByClassName("subNav")[0];
+     var bodyTag = document.getElementsByTagName("body")[0].classList;
 
      //..............escape key................
      document.addEventListener("keydown", function (e) {
          if (mainNavContainer.contains == "mobileOpen" || e.keyCode == 27) {
              mainNavContainer.remove("mobileOpen");
+             mainNavContainer.remove("tabletOpen");
              document.getElementById("mainNavContainer").style.display = "none";
              subNav.style.display = "none";
+             bodyTag.remove("bodyWidth");
+             mobileMenu.style.display = "block";
          }
      });
 
@@ -48,6 +52,10 @@
              stickyHeader.classList.add("stickyNav");
              imgToggle.src = "images/logoFaded.png";
              mobileMenu.style.color = "#95989A";
+             mainNavContainer.remove("tabletOpen");
+             document.getElementById("mainNavContainer").style.display = "none";
+             bodyTag.remove("bodyWidth");
+             mobileMenu.style.display = "block";
          } else {
              stickyHeader.classList.remove("stickyNav");
              imgToggle.src = "images/logo.png";
@@ -57,10 +65,21 @@
      })
      //..............end checking width............
      mobileMenu.addEventListener("click", function () {
-         if (winWidth <= 768) {
+         if (winWidth >= 1280) {
+             
+         }else if(winWidth <= 1280 && winWidth >= 768){
+             mainNavContainer.remove("mobileOpen");
+             mainNavContainer.add("tabletOpen");
+             document.getElementById("mainNavContainer").style.display = "block";
+             bodyTag.add("bodyWidth");
+             mobileMenu.style.display = "none";
+         }else{
+             mainNavContainer.remove("tabletOpen");     
              mainNavContainer.add("mobileOpen");
              document.getElementById("mainNavContainer").style.display = "block";
          }
+         
+
      });
 
      mobileClose.addEventListener("click", function () {
@@ -69,6 +88,8 @@
          subNav.style.display = "none";
          openSubNav.classList.remove("rotateClass");
          document.getElementById("openSubNav").style.color = "#95989A";
+         bodyTag.remove("bodyWidth");
+         mobileMenu.style.display = "block";
      });
 
      openSubNav.addEventListener("click", function () {
