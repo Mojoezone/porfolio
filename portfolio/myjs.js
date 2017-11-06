@@ -33,10 +33,15 @@
          winWidth = window.innerWidth;
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight;
-         mainNavContainer.remove("tabletOpen");
-         document.getElementById("mainNavContainer").style.display = "none";
+         mainNavContainer.remove("tabletOpen");  
          bodyTag.remove("bodyWidth");
+         if(winWidth <= 1280){
          mobileMenu.style.display = "block";
+             document.getElementById("mainNavContainer").style.display = "none";
+         }else{
+             mobileMenu.style.display = "none"; 
+             document.getElementById("mainNavContainer").style.display = "block";
+         }
      });
      //......resize only check when resizing the browser and load will check as page load..
      window.addEventListener("load", function () {
@@ -53,15 +58,22 @@
      //....check if document height has more than 100 px than the viewport height...
      window.addEventListener("scroll", function (e) {
          if (docHeight >= winHeight + 100 && stickyOffset < window.pageYOffset) {
-             stickyHeader.classList.add("stickyNav");
-             imgToggle.src = "images/logoFaded.png";
-             mobileMenu.style.color = "#95989A";
-             mainNavContainer.remove("tabletOpen");
-             document.getElementById("mainNavContainer").style.display = "none";
-             bodyTag.remove("bodyWidth");
-             mobileMenu.style.display = "block";
+
+             if (winWidth >= 1280) {
+                 stickyHeader.classList.add("dstickyNav");
+                 //                 imgToggle.src = "images/logoFaded.png"; 
+                 mobileMenu.style.display = "none";
+             } else {
+                 stickyHeader.classList.add("stickyNav");
+                 imgToggle.src = "images/logoFaded.png";
+                 mobileMenu.style.color = "#95989A";
+                 mainNavContainer.remove("tabletOpen");
+                 document.getElementById("mainNavContainer").style.display = "none";
+                 bodyTag.remove("bodyWidth");
+                 mobileMenu.style.display = "block";
+             }
          } else {
-             stickyHeader.classList.remove("stickyNav");
+             stickyHeader.classList.remove("stickyNav", "dstickyNav");
              imgToggle.src = "images/logo.png";
              mobileMenu.style.color = "#4A606E";
          }
@@ -70,7 +82,7 @@
      //..............end checking width............
      mobileMenu.addEventListener("click", function () {
          if (winWidth >= 1280) {
-
+              mobileMenu.style.display = "none";
          } else if (winWidth <= 1280 && winWidth >= 768) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.add("tabletOpen");
@@ -99,7 +111,7 @@
 
 
      //..............submenu................
-     function toggleMenu(event) {
+     function toggleSubNav(event) {
          if (!this.classList.contains('rotateClass')) {
              this.classList.add('rotateClass');
              subNav.style.display = "block";
@@ -112,7 +124,7 @@
          event.preventDefault();
      }
 
-     openSubNav.addEventListener('click', toggleMenu, false);
+     openSubNav.addEventListener('click', toggleSubNav, false);
      //     openSubNav.addEventListener("click", function () {
      //         if (subNav.style.display == "block") {
      //             subNav.style.display = "none";

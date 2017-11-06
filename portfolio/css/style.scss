@@ -15,7 +15,7 @@ $textWhite: #e4e4e4;
 }
 
 //.............................universal css.............................
-.clearfix{
+.clearfix {
     content: " ";
     clear: both;
 }
@@ -45,6 +45,9 @@ header ul.mainNav li a.active {
     font-weight: 700;
 }
 
+.codes{
+    color: $mainColor;
+}
 //..............................css...........................
 body {
     font-family: 'Monda', sans-serif;
@@ -157,7 +160,7 @@ header .subNav li a {
 }
 
 .mailContainer {
-//    text-align: center;
+    //    text-align: center;
     a {
         color: $mainColor;
     }
@@ -428,6 +431,7 @@ main {
 .projectContainer {
     .pTitleContainer {
         h2 {
+            font-size: 2em;
             line-height: 3em;
             color: $mainColor;
             text-align: center;
@@ -466,7 +470,7 @@ main {
         .button {
             padding: .5em 1em;
             @include border-radius(5px);
-             transition: all .2s easy-in-out;
+            transition: all .2s easy-in-out;
         }
     }
 }
@@ -534,8 +538,8 @@ main {
         }
 
     } //.......body width when tablet menu open.....
-    body{
-         transition: all .4s ease-in-out;
+    body {
+        transition: all .4s ease-in-out;
     }
     .bodyWidth {
         width: 70%;
@@ -549,75 +553,68 @@ main {
     }
     .footerNav > li ul > li {
         display: none;
-    }
-    //...social nav
-    .socialNav li{
+    } //...social nav
+    .socialNav li {
         padding-right: 1.5em;
-    }
-    //........copyright...
-    .copyRight{
+    } //........copyright...
+    .copyRight {
         padding-top: 3em;
         text-align: center;
-    }
-    
-    //......main............
-    main{
+    } //......main............
+    main {
         min-height: 35em;
     }
-    main .introContainer{
+    main .introContainer {
         margin-top: 8em;
-        h3{
+        h3 {
             font-size: 1.3em;
         }
-        h2{
+        h2 {
             font-size: 1.5em;
         }
-    }
-    //........aboutContainer.......
-    .aboutContainer{
+    } //........aboutContainer.......
+    .aboutContainer {
         margin-top: 8em;
-        blockquote{
+        blockquote {
             font-size: 1.5em;
         }
-        .aboutSummery{
+        .aboutSummery {
             margin-top: 10em;
-            #resumeTrigger{
+            #resumeTrigger {
                 margin-top: 3em;
             }
         }
-    }
-    //..............contact.........
+    } //..............contact.........
     .formContainer {
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 3em;
-    padding-top: 8em;
-}
-    //.................portfolio............
-    .portfolioContainer{ 
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        padding-top: 8em;
+    } //.................portfolio............
+    .portfolioContainer {
         margin: 8em 0;
-        .plogoContainer{
-        width: 45%;
-        float: left;
-        margin: 0 2.5% 5em 2.5%;
-            h3{
+        .plogoContainer {
+            width: 45%;
+            float: left;
+            margin: 0 2.5% 5em 2.5%;
+            h3 {
                 width: 100%;
-            img[src="images/fashionFamily.svg"]{
-                height: 5.1em;
-            }
+                img[src="images/fashionFamily.svg"] {
+                    height: 5.1em;
+                }
             }
         }
-    }
-    //.................project.............
-    .projectContainer{
-        .pTitleContainer{
-            height: 26.5em;
+    } //.................project.............
+    .projectContainer {
+        .pTitleContainer {
+            min-height: 26.5em;
             background-color: $myColor;
-            h2{
-                 width: 50%;
-                 float: right;
-                 padding-top: 2em;
-                img[src="images/bikeshop.svg"], img[src="images/shield.svg"] {
+            h2 {
+                width: 50%;
+                float: right;
+                padding-top: 2em;
+                img[src="images/bikeshop.svg"],
+                img[src="images/shield.svg"] {
                     width: 50%;
                 }
             }
@@ -627,17 +624,135 @@ main {
                 padding: 5% 2%;
             }
         }
-        .pCaseStudy{
+        .pCaseStudy {
             padding: 4em 5%;
         }
-    }
-    //.....................other project nav..............
-    .otherProjects{
-        .otherProject{
+    } //.....................other project nav..............
+    .otherProjects {
+        .otherProject {
             width: 25%;
-            float:left;
+            float: left;
             margin: 2em 4.1666%;
             background-color: transparent;
+        }
+    }
+}
+
+//.............................................end 768px ........................................
+//...........................................media 1280px.........................................
+@media only screen and (min-width: 1280px) {
+    #mobileMenu {
+        display: none;
+    }
+    .dstickyNav {
+        position: fixed;
+        top: 0;
+        background-color: $myColor;
+        .mainNav li a {
+            color: $mainColor !important;
+        }
+    }
+    #mainNavContainer,
+    .dstickyNav {
+        display: block;
+        float: right;
+        .fadedLogo {
+            display: none;
+        }
+        #mobileClose {
+            display: none;
+        }
+        .mainNav {
+            padding: 0;
+            li {
+                display: inline-block;
+                padding: 1.5em 1.5em 1em;
+                .subNav {
+                    background-color: $myColor;
+                    margin-top: 1.5em;
+                    padding: 1em 0;
+                    width: 15em;
+                    position: absolute;
+                    top: 5em;
+                    left: 0;
+                    li {
+                        a {
+                            color: $mainColor;
+                        }
+                        a:hover {
+                            color: $textWhite;
+                        }
+                    }
+                }
+                #openSubNav {
+                    padding-left: 0;
+                    display: none;
+                }
+                a {
+                    color: $myColor;
+                }
+                a:hover {
+                    color: $mainColor;
+                }
+
+            }
+            .subNavContainer {
+                position: relative;
+            }
+            .subNavContainer:hover .subNav {
+                display: block;
+                transition-delay: 2s;
+            }
+        }
+        .mailContainer {
+            display: none;
+        }
+    } //.....................nav.....................
+    //...........................main..............
+    main{
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    //.......................about.................
+    .aboutContainer {
+        width: 55%;
+    } //.....................contact...................
+    .formContainer {
+        width: 40%;
+        .mailContainer {
+            font-size: 1.5em;
+            a:hover {
+                color: $mainColor;
+            }
+        }
+    } //.................project.............
+    .projectContainer {
+        margin-top: 1em;
+        .pTitleContainer {
+            //            height: 26.5em;
+            //            background-color: $myColor;
+            h2 {
+                width: 40%;
+                margin-right: 5%;
+                font-size: 3em;
+                img[src="images/fashionFamily.svg"]{
+                    width: 70%;
+                }
+                //                 float: right;
+                //                 padding-top: 2em;
+                //                img[src="images/bikeshop.svg"], img[src="images/shield.svg"] {
+                //                    width: 50%;
+                //                }
+            }
+            .singlePIMG {
+                width: 40%;
+                //                float: left;
+                padding: 5% 5%;
+                margin-left: 5%;
+            }
+        }
+        .pCaseStudy {
+            padding: 4em 10%;
         }
     }
 }

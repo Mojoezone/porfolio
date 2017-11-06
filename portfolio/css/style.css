@@ -25,6 +25,9 @@ header ul.mainNav li a.active {
   color: #4A606E;
   font-weight: 700; }
 
+.codes {
+  color: #95989A; }
+
 body {
   font-family: 'Monda', sans-serif; }
 
@@ -314,6 +317,7 @@ main {
   padding-bottom: 1em; }
 
 .projectContainer .pTitleContainer h2 {
+  font-size: 2em;
   line-height: 3em;
   color: #95989A;
   text-align: center;
@@ -464,13 +468,14 @@ main {
           height: 5.1em; }
 
   .projectContainer .pTitleContainer {
-    height: 26.5em;
+    min-height: 26.5em;
     background-color: #4A606E; }
     .projectContainer .pTitleContainer h2 {
       width: 50%;
       float: right;
       padding-top: 2em; }
-      .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"], .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
+      .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"],
+      .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
         width: 50%; }
     .projectContainer .pTitleContainer .singlePIMG {
       width: 50%;
@@ -484,6 +489,98 @@ main {
     float: left;
     margin: 2em 4.1666%;
     background-color: transparent; } }
+@media only screen and (min-width: 1280px) {
+  #mobileMenu {
+    display: none; }
+
+  .dstickyNav {
+    position: fixed;
+    top: 0;
+    background-color: #4A606E; }
+    .dstickyNav .mainNav li a {
+      color: #95989A !important; }
+
+  #mainNavContainer,
+  .dstickyNav {
+    display: block;
+    float: right; }
+    #mainNavContainer .fadedLogo,
+    .dstickyNav .fadedLogo {
+      display: none; }
+    #mainNavContainer #mobileClose,
+    .dstickyNav #mobileClose {
+      display: none; }
+    #mainNavContainer .mainNav,
+    .dstickyNav .mainNav {
+      padding: 0; }
+      #mainNavContainer .mainNav li,
+      .dstickyNav .mainNav li {
+        display: inline-block;
+        padding: 1.5em 1.5em 1em; }
+        #mainNavContainer .mainNav li .subNav,
+        .dstickyNav .mainNav li .subNav {
+          background-color: #4A606E;
+          margin-top: 1.5em;
+          padding: 1em 0;
+          width: 15em;
+          position: absolute;
+          top: 5em;
+          left: 0; }
+          #mainNavContainer .mainNav li .subNav li a,
+          .dstickyNav .mainNav li .subNav li a {
+            color: #95989A; }
+          #mainNavContainer .mainNav li .subNav li a:hover,
+          .dstickyNav .mainNav li .subNav li a:hover {
+            color: #e4e4e4; }
+        #mainNavContainer .mainNav li #openSubNav,
+        .dstickyNav .mainNav li #openSubNav {
+          padding-left: 0;
+          display: none; }
+        #mainNavContainer .mainNav li a,
+        .dstickyNav .mainNav li a {
+          color: #4A606E; }
+        #mainNavContainer .mainNav li a:hover,
+        .dstickyNav .mainNav li a:hover {
+          color: #95989A; }
+      #mainNavContainer .mainNav .subNavContainer,
+      .dstickyNav .mainNav .subNavContainer {
+        position: relative; }
+      #mainNavContainer .mainNav .subNavContainer:hover .subNav,
+      .dstickyNav .mainNav .subNavContainer:hover .subNav {
+        display: block;
+        transition-delay: 2s; }
+    #mainNavContainer .mailContainer,
+    .dstickyNav .mailContainer {
+      display: none; }
+
+  main {
+    max-width: 1500px;
+    margin: 0 auto; }
+
+  .aboutContainer {
+    width: 55%; }
+
+  .formContainer {
+    width: 40%; }
+    .formContainer .mailContainer {
+      font-size: 1.5em; }
+      .formContainer .mailContainer a:hover {
+        color: #95989A; }
+
+  .projectContainer {
+    margin-top: 1em; }
+    .projectContainer .pTitleContainer h2 {
+      width: 40%;
+      margin-right: 5%;
+      font-size: 3em; }
+      .projectContainer .pTitleContainer h2 img[src="images/fashionFamily.svg"] {
+        width: 70%; }
+    .projectContainer .pTitleContainer .singlePIMG {
+      width: 40%;
+      padding: 5% 5%;
+      margin-left: 5%; }
+    .projectContainer .pCaseStudy {
+      padding: 4em 10%; } }
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?36130799");

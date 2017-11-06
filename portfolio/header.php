@@ -13,7 +13,8 @@ $urlName = basename($urlName, '.php');
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Joe Mo - <?php echo get_title();?></title>
+        <title><?php echo get_title();?></title>
+        <link rel="shortcut icon" href="images/logo.ico">
         <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -30,7 +31,7 @@ $urlName = basename($urlName, '.php');
                     <li>
                         <a class="<?php if($urlName == 'index'){echo 'active';} ?>" href="index.php">Home</a>
                     </li>
-                    <li>
+                    <li class="subNavContainer">
                         <a class="<?php if($urlName == 'portfolio'){echo 'active';} ?>" href="portfolio.php">Portfolio</a><span id="openSubNav">&#187;</span>
                         <ul class="subNav">
                            <?php 
