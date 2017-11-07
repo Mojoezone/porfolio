@@ -367,6 +367,8 @@ main {
     }
     #resumeContainer {
         padding-top: 3em;
+        .aniResume{
+            margin-bottom: 4em;
         h4 {
             color: $mainColor;
         }
@@ -376,6 +378,7 @@ main {
                 color: $myColor;
             }
         }
+    }
     }
 }
 
@@ -574,6 +577,7 @@ main {
         }
     } //........aboutContainer.......
     .aboutContainer {
+        font-size: 1.2em;
         margin-top: 8em;
         blockquote {
             font-size: 1.5em;
@@ -716,16 +720,25 @@ main {
     //.......................about.................
     .aboutContainer {
         width: 55%;
+        font-size: 1.2em;
     } //.....................contact...................
     .formContainer {
         width: 40%;
+        font-size: 1.5em;
         .mailContainer {
-            font-size: 1.5em;
             a:hover {
                 color: $mainColor;
             }
         }
-    } //.................project.............
+    } 
+    //................................................portfolio................
+    .portfolioContainer{
+        width: 60%; 
+        margin: 0 auto;
+        margin-top: 8em;
+    }
+    
+    //.................project.............
     .projectContainer {
         margin-top: 1em;
         .pTitleContainer {
@@ -733,7 +746,7 @@ main {
             //            background-color: $myColor;
             h2 {
                 width: 40%;
-                margin-right: 5%;
+                margin-right: 10%;
                 font-size: 3em;
                 img[src="images/fashionFamily.svg"]{
                     width: 70%;
@@ -756,7 +769,7 @@ main {
         }
     }
 }
-
+//............................................end media query 1280px .............................
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';

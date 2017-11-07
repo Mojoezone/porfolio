@@ -8,9 +8,17 @@
      var openSubNav = document.getElementById("openSubNav");
      var subNav = document.getElementsByClassName("subNav")[0];
      var bodyTag = document.getElementsByTagName("body")[0].classList;
+     //     var mnc = document.getElementById("mainNavContainer").style.display("block");
+     //     mnc = false;
+
+     function eventhandler(trigger, event, expression) {
+         //    this.event = 'click';
+         return trigger.addEventListener(event, expression, false);
+     }
 
      //..............escape key................
-     document.addEventListener("keydown", function (e) {
+     eventhandler(document, "keydown", escapeKey);
+     function escapeKey(event) {
          if (mainNavContainer.contains == "mobileOpen" || e.keyCode == 27) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.remove("tabletOpen");
@@ -19,7 +27,18 @@
              bodyTag.remove("bodyWidth");
              mobileMenu.style.display = "block";
          }
-     });
+         event.preventDefault();
+     }
+     //     document.addEventListener("keydown", function (e) {
+     //         if (mainNavContainer.contains == "mobileOpen" || e.keyCode == 27) {
+     //             mainNavContainer.remove("mobileOpen");
+     //             mainNavContainer.remove("tabletOpen");
+     //             document.getElementById("mainNavContainer").style.display = "none";
+     //             subNav.style.display = "none";
+     //             bodyTag.remove("bodyWidth");
+     //             mobileMenu.style.display = "block";
+     //         }
+     //     });
 
      //................even hanndler.............
 
@@ -29,26 +48,52 @@
      var winWidth;
      var winHeight;
      var docHeight;
-     window.addEventListener("resize", function () {
+
+     eventhandler(window, "resize", windowResize);
+
+     function windowResize(event) {
          winWidth = window.innerWidth;
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight;
-         mainNavContainer.remove("tabletOpen");  
+         mainNavContainer.remove("tabletOpen");
          bodyTag.remove("bodyWidth");
-         if(winWidth <= 1280){
-         mobileMenu.style.display = "block";
+         if (winWidth <= 1280) {
+             mobileMenu.style.display = "block";
              document.getElementById("mainNavContainer").style.display = "none";
-         }else{
-             mobileMenu.style.display = "none"; 
+         } else {
+             mobileMenu.style.display = "none";
              document.getElementById("mainNavContainer").style.display = "block";
          }
-     });
+         event.preventDefault();
+     }
+     //     window.addEventListener("resize", function () {
+     //         winWidth = window.innerWidth;
+     //         winHeight = window.innerHeight;
+     //         docHeight = document.body.clientHeight;
+     //         mainNavContainer.remove("tabletOpen");
+     //         bodyTag.remove("bodyWidth");
+     //         if (winWidth <= 1280) {
+     //             mobileMenu.style.display = "block";
+     //             document.getElementById("mainNavContainer").style.display = "none";
+     //         } else {
+     //             mobileMenu.style.display = "none";
+     //             document.getElementById("mainNavContainer").style.display = "block";
+     //         }
+     //     });
      //......resize only check when resizing the browser and load will check as page load..
-     window.addEventListener("load", function () {
+     eventhandler(window, "load", windowLoad);
+
+     function windowLoad(event) {
          winWidth = window.innerWidth;
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight;
-     });
+         event.preventDefault();
+     }
+     //     window.addEventListener("load", function () {
+     //         winWidth = window.innerWidth;
+     //         winHeight = window.innerHeight;
+     //         docHeight = document.body.clientHeight;
+     //     });
 
      //........stickyNav.......
      var stickyHeader = document.getElementById("stickyHeader");
@@ -56,16 +101,18 @@
      var imgToggle = document.getElementById("imgToggle");
 
      //....check if document height has more than 100 px than the viewport height...
-     window.addEventListener("scroll", function (e) {
-         if (docHeight >= winHeight + 100 && stickyOffset < window.pageYOffset) {
+     eventhandler(window, "scroll", scrollDetection);
 
+     function scrollDetection(event) {
+         if (docHeight >= winHeight + 100 && stickyOffset < window.pageYOffset) {
+             imgToggle.src = "images/logoFaded.png";
              if (winWidth >= 1280) {
                  stickyHeader.classList.add("dstickyNav");
-                 //                 imgToggle.src = "images/logoFaded.png"; 
+
                  mobileMenu.style.display = "none";
              } else {
                  stickyHeader.classList.add("stickyNav");
-                 imgToggle.src = "images/logoFaded.png";
+
                  mobileMenu.style.color = "#95989A";
                  mainNavContainer.remove("tabletOpen");
                  document.getElementById("mainNavContainer").style.display = "none";
@@ -77,12 +124,37 @@
              imgToggle.src = "images/logo.png";
              mobileMenu.style.color = "#4A606E";
          }
-
-     })
+         event.preventDefault();
+     }
+     //     window.addEventListener("scroll", function (e) {
+     //         if (docHeight >= winHeight + 100 && stickyOffset < window.pageYOffset) {
+     //             imgToggle.src = "images/logoFaded.png";
+     //             if (winWidth >= 1280) {
+     //                 stickyHeader.classList.add("dstickyNav");
+     //
+     //                 mobileMenu.style.display = "none";
+     //             } else {
+     //                 stickyHeader.classList.add("stickyNav");
+     //
+     //                 mobileMenu.style.color = "#95989A";
+     //                 mainNavContainer.remove("tabletOpen");
+     //                 document.getElementById("mainNavContainer").style.display = "none";
+     //                 bodyTag.remove("bodyWidth");
+     //                 mobileMenu.style.display = "block";
+     //             }
+     //         } else {
+     //             stickyHeader.classList.remove("stickyNav", "dstickyNav");
+     //             imgToggle.src = "images/logo.png";
+     //             mobileMenu.style.color = "#4A606E";
+     //         }
+     //
+     //     })
      //..............end checking width............
-     mobileMenu.addEventListener("click", function () {
+     eventhandler(mobileMenu, "click", menuTrigger);
+
+     function menuTrigger(event) {
          if (winWidth >= 1280) {
-              mobileMenu.style.display = "none";
+             mobileMenu.style.display = "none";
          } else if (winWidth <= 1280 && winWidth >= 768) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.add("tabletOpen");
@@ -94,23 +166,55 @@
              mainNavContainer.add("mobileOpen");
              document.getElementById("mainNavContainer").style.display = "block";
          }
+         event.preventDefault();
+     }
+     //     mobileMenu.addEventListener("click", function () {
+     //         if (winWidth >= 1280) {
+     //             mobileMenu.style.display = "none";
+     //         } else if (winWidth <= 1280 && winWidth >= 768) {
+     //             mainNavContainer.remove("mobileOpen");
+     //             mainNavContainer.add("tabletOpen");
+     //             document.getElementById("mainNavContainer").style.display = "block";
+     //             bodyTag.add("bodyWidth");
+     //             mobileMenu.style.display = "none";
+     //         } else {
+     //             mainNavContainer.remove("tabletOpen");
+     //             mainNavContainer.add("mobileOpen");
+     //             document.getElementById("mainNavContainer").style.display = "block";
+     //         }
+     //
+     //
+     //     });
 
+     //     mobileClose.addEventListener("click", function () {
+     //         mainNavContainer.remove("mobileOpen");
+     //         document.getElementById("mainNavContainer").style.display = "none";
+     //         subNav.style.display = "none";
+     //         openSubNav.classList.remove("rotateClass");
+     //         document.getElementById("openSubNav").style.color = "#95989A";
+     //         bodyTag.remove("bodyWidth");
+     //         mobileMenu.style.display = "block";
+     //     });
 
-     });
+     eventhandler(mobileClose, "click", mobileX);
 
-     mobileClose.addEventListener("click", function () {
+     function mobileX(event) {
          mainNavContainer.remove("mobileOpen");
          document.getElementById("mainNavContainer").style.display = "none";
+         //             mnc;
          subNav.style.display = "none";
          openSubNav.classList.remove("rotateClass");
          document.getElementById("openSubNav").style.color = "#95989A";
          bodyTag.remove("bodyWidth");
          mobileMenu.style.display = "block";
-     });
+         event.preventDefault();
+     }
 
 
 
      //..............submenu................
+     eventhandler(openSubNav, "click", toggleSubNav);
+
      function toggleSubNav(event) {
          if (!this.classList.contains('rotateClass')) {
              this.classList.add('rotateClass');
@@ -124,7 +228,7 @@
          event.preventDefault();
      }
 
-     openSubNav.addEventListener('click', toggleSubNav, false);
+     //     openSubNav.addEventListener('click', toggleSubNav, false);
      //     openSubNav.addEventListener("click", function () {
      //         if (subNav.style.display == "block") {
      //             subNav.style.display = "none";

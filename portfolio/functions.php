@@ -51,11 +51,12 @@ function project(){
         <h2><img src="'.$row['p_logo'].'" alt="'.$row['p_name'].'" >'.'</h2>';
     }
     
-   if(!$row['p_m_image']){ 
-       echo '<div class="singlePIMG"><img src="'.$row['p_d_image'].'" alt="'.$row['p_name'].'"></div>';
-   }else{
-      echo '<div  class="singlePIMG"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></div>' ;
-   }
+            echo '<div  class="singlePIMG"><picture><source media="(min-width: 1280px)" srcset="'.$row['p_d_image'].'"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></picture></div>' ;
+//   if(!$row['p_m_image']){ 
+//       echo '<div class="singlePIMG"><img src="'.$row['p_d_image'].'" alt="'.$row['p_name'].'"></div>';
+//   }else{
+//      echo '<div  class="singlePIMG"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></div>' ;
+//   }
 
     echo
    ' </div>

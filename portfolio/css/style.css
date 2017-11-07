@@ -279,12 +279,14 @@ main {
       transition: all .2s easy-in-out; }
   .aboutContainer #resumeContainer {
     padding-top: 3em; }
-    .aboutContainer #resumeContainer h4 {
-      color: #95989A; }
-    .aboutContainer #resumeContainer li {
-      color: #95989A; }
-      .aboutContainer #resumeContainer li p {
-        color: #4A606E; }
+    .aboutContainer #resumeContainer .aniResume {
+      margin-bottom: 4em; }
+      .aboutContainer #resumeContainer .aniResume h4 {
+        color: #95989A; }
+      .aboutContainer #resumeContainer .aniResume li {
+        color: #95989A; }
+        .aboutContainer #resumeContainer .aniResume li p {
+          color: #4A606E; }
 
 .portfolioContainer .plogoContainer {
   width: 100%;
@@ -442,6 +444,7 @@ main {
       font-size: 1.5em; }
 
   .aboutContainer {
+    font-size: 1.2em;
     margin-top: 8em; }
     .aboutContainer blockquote {
       font-size: 1.5em; }
@@ -558,20 +561,25 @@ main {
     margin: 0 auto; }
 
   .aboutContainer {
-    width: 55%; }
+    width: 55%;
+    font-size: 1.2em; }
 
   .formContainer {
-    width: 40%; }
-    .formContainer .mailContainer {
-      font-size: 1.5em; }
-      .formContainer .mailContainer a:hover {
-        color: #95989A; }
+    width: 40%;
+    font-size: 1.5em; }
+    .formContainer .mailContainer a:hover {
+      color: #95989A; }
+
+  .portfolioContainer {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 8em; }
 
   .projectContainer {
     margin-top: 1em; }
     .projectContainer .pTitleContainer h2 {
       width: 40%;
-      margin-right: 5%;
+      margin-right: 10%;
       font-size: 3em; }
       .projectContainer .pTitleContainer h2 img[src="images/fashionFamily.svg"] {
         width: 70%; }
