@@ -14,7 +14,7 @@ include('header.php');
             <div id="resumeTrigger" class="button">Go to Resume</div>
         </div>
         <div id="resumeContainer">
-            <div class="aniResume">
+            <div class="aniResume currentSection">
                 <h4>Education:</h4>
                 <ul>
                     <li>BACHELOR of SCIENCE DEGREE

@@ -1,6 +1,6 @@
 <div class="toTop clearfix"><a href="#" class="icon-up-open"></a></div>
 <footer>
-   
+
     <nav>
         <ul class="footerNav">
             <li>
@@ -9,7 +9,7 @@
             <li>
                 <a class="<?php if($urlName == 'portfolio'){echo 'active';} ?>" href="portfolio.php">Portfolio</a>
                 <ul class="subNav">
-                   <?php 
+                    <?php 
                             $query = "SELECT p_id, p_name
                                       FROM projects";
                             $result = $db->query($query);
@@ -17,10 +17,12 @@
                                 while($row = $result->fetch_assoc()){
                             
                             ?>
-                            <li>
-                                <a class="<?php if($p_id == $row['p_id']){echo 'active';} ?>" href="project.php?p_id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a>
-                            </li>
-                         <?php
+                    <li>
+                        <a class="<?php if($p_id == $row['p_id']){echo 'active';} ?>" href="project.php?p_id=<?php echo $row['p_id']; ?>">
+                            <?php echo $row['p_name']; ?>
+                        </a>
+                    </li>
+                    <?php
                                 }
                              $result->free();   
                             }
@@ -31,7 +33,7 @@
                 <a class="<?php if($urlName == 'about'){echo 'active';} ?>" href="about.php">About</a>
             </li>
             <li>
-                <a class="<?php if($urlName == 'contact'){echo 'active';} ?>"  href="contact.php">Contact</a>
+                <a class="<?php if($urlName == 'contact'){echo 'active';} ?>" href="contact.php">Contact</a>
             </li>
         </ul>
     </nav>
@@ -56,37 +58,44 @@
 
 </script>
 <script>
-//    var toTop = document.querySelector(".toTop");
-//    toTop.addEventListener("click", smoothToTop);
-//    function smoothToTop(){
-//       var toTopLocation = toTop.offsetTop;
-//        var winTop = 0;
-//        var winScrolled = window.pageXOffset;
-//      
-//    }
+    //    var toTop = document.querySelector(".toTop");
+    //    toTop.addEventListener("click", smoothToTop);
+    //    function smoothToTop(){
+    //       var toTopLocation = toTop.offsetTop;
+    //        var winTop = 0;
+    //        var winScrolled = window.pageXOffset;
+    //      
+    //    }
     var resumeTrigger = document.getElementById("resumeTrigger");
     var resumeContainer = document.getElementById("resumeContainer");
-    const aniResumes = resumeContainer.querySelectorAll(".aniResume");
-    const aniResume = Array.from(aniResumes);
-     
-//    var aniResumeHeight =  aniResume.forEach(function(aniResume){return aniResume.clientHeight; });
-   var current;
-    var count;
-    
-    resumeTrigger.addEventListener("click", function() {
-       animationResume();
+    var aniResumes = resumeContainer.querySelectorAll("#resumeContainer .aniResume");
+    var currentSection = resumeContainer.querySelectorAll("#resumeContainer .currentSection");
+    var currentBox = 0;
+    var scrollTop = resumeContainer.offsetTop;
+    var aniHeigh;
+
+    document.addEventListener("scroll", function() {
+        animationResume();
+
     });
+
+        aniResumes.forEach(function(aniResume) {
     
-    for (var i = 0; i < aniResume.length; i++) {
-          count = aniResume[i].clientHeight;
-        }
-//aniresume height
-    
+            aniHeigh = aniResume.clientHeight;
+        });
+
+// if (!currentSection) {
+//            aniResumes.style.display = "none";
+//        } else {
+//            aniResumes.style.display = "block";
+//        }
+    //use aniHeight, sccrollTop, window.innerHeight to calculate the scroll trigger animation
     function animationResume() {
-        var scrollTop = resumeContainer.offsetTop;
-        var aniResumeTop = scrollTop + count;
-        console.log(scrollTop, aniResumeTop);
-//       window.scrollBy(scrollTop);
+
+        aniResumes[currentBox].className = "aniResume";
+        currentBox = (currentBox + 1) % aniResumes.length;
+        if(scrollTop){setTimeout(function(){aniResumes[currentBox].className = "aniResume currentSection";}, 200);}
+       
     }
 
 </script>

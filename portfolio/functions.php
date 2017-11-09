@@ -58,6 +58,7 @@ function project(){
 //      echo '<div  class="singlePIMG"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></div>' ;
 //   }
 
+
     echo
    ' </div>
     <div class="pCaseStudy clearfix">

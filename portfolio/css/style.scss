@@ -368,8 +368,9 @@ main {
     #resumeContainer {
         padding-top: 3em;
         .aniResume{
+            opacity: 0;
+            transition: opacity .5s ease-in;
             margin-bottom: 4em;
-            animation: aniTextBox 1s ease;
         h4 {
             color: $mainColor;
         }
@@ -380,12 +381,11 @@ main {
             }
         }
     }
+        .currentSection{
+            z-index: 2;
+            opacity: 1;
+        }
     }
-}
-
-@keyframes aniTextBox{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 //................................end about me.........................
 //....................................portfolio page........................

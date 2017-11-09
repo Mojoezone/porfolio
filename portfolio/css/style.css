@@ -280,6 +280,8 @@ main {
   .aboutContainer #resumeContainer {
     padding-top: 3em; }
     .aboutContainer #resumeContainer .aniResume {
+      opacity: 0;
+      transition: opacity .5s ease-in;
       margin-bottom: 4em; }
       .aboutContainer #resumeContainer .aniResume h4 {
         color: #95989A; }
@@ -287,6 +289,9 @@ main {
         color: #95989A; }
         .aboutContainer #resumeContainer .aniResume li p {
           color: #4A606E; }
+    .aboutContainer #resumeContainer .currentSection {
+      z-index: 2;
+      opacity: 1; }
 
 .portfolioContainer .plogoContainer {
   width: 100%;

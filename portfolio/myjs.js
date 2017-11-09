@@ -18,7 +18,7 @@
 
      //..............escape key................
      eventhandler(document, "keydown", escapeKey);
-     function escapeKey(event) {
+     function escapeKey(e) {
          if (mainNavContainer.contains == "mobileOpen" || e.keyCode == 27) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.remove("tabletOpen");
