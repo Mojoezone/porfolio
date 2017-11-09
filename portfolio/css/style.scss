@@ -369,6 +369,7 @@ main {
         padding-top: 3em;
         .aniResume{
             margin-bottom: 4em;
+            animation: aniTextBox 1s ease;
         h4 {
             color: $mainColor;
         }
@@ -382,6 +383,10 @@ main {
     }
 }
 
+@keyframes aniTextBox{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 //................................end about me.........................
 //....................................portfolio page........................
 .portfolioContainer {

@@ -268,7 +268,9 @@
      }
      //....................end year and greeting.....
 
-
+//...............smooth to top.....................
+     
+     
      //...................animation resume in about page............   
 
  })();

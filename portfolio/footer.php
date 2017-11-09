@@ -55,31 +55,41 @@
 
 
 </script>
-<!--
 <script>
+//    var toTop = document.querySelector(".toTop");
+//    toTop.addEventListener("click", smoothToTop);
+//    function smoothToTop(){
+//       var toTopLocation = toTop.offsetTop;
+//        var winTop = 0;
+//        var winScrolled = window.pageXOffset;
+//      
+//    }
     var resumeTrigger = document.getElementById("resumeTrigger");
     var resumeContainer = document.getElementById("resumeContainer");
-    var aniResume = resumeContainer.querySelectorAll(".aniResume");
+    const aniResumes = resumeContainer.querySelectorAll(".aniResume");
+    const aniResume = Array.from(aniResumes);
+     
+//    var aniResumeHeight =  aniResume.forEach(function(aniResume){return aniResume.clientHeight; });
    var current;
-    var count = 0;
+    var count;
     
     resumeTrigger.addEventListener("click", function() {
        animationResume();
     });
     
     for (var i = 0; i < aniResume.length; i++) {
-            count += aniResume[i];
+          count = aniResume[i].clientHeight;
         }
-
+//aniresume height
+    
     function animationResume() {
-        
-        if(count == 0){
-            aniResume.style.display = "block";
-        }
+        var scrollTop = resumeContainer.offsetTop;
+        var aniResumeTop = scrollTop + count;
+        console.log(scrollTop, aniResumeTop);
+//       window.scrollBy(scrollTop);
     }
 
 </script>
--->
 </body>
 
 </html>
