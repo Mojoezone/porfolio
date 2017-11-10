@@ -25,7 +25,7 @@ $urlName = basename($urlName, '.php');
             <h1 id="myLogo"><a href="index.php"><img id="imgToggle" src="images/logo.png" alt="Joe Mo Logo"></a></h1>
             <div id="mobileMenu"><span class="icon-menu"></span></div>
             <nav id="mainNavContainer">
-                <div class="fadedLogo"><a href="#"><img src="images/logofaded.png" alt="Joe Mo Logo"></a></div>
+                <div class="fadedLogo"><a href="#"><img src="images/logoFaded.png" alt="Joe Mo Logo"></a></div>
                 <div><span id="mobileClose" class="icon-cancel"></span></div>
                 <ul class="mainNav">
                     <li>

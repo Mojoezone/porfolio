@@ -53,65 +53,8 @@
 
     <p class="copyRight">&copy;<span id="currentYear"></span> mojoezone.com All Right Reserved.</p>
 </footer>
-<script type="text/javascript" src="myjs.js">
+<script type="text/javascript" src="myjs.js"></script>
 
-
-</script>
-<script>
-    //    var toTop = document.querySelector(".toTop");
-    //    toTop.addEventListener("click", smoothToTop);
-    //    function smoothToTop(){
-    //       var toTopLocation = toTop.offsetTop;
-    //        var winTop = 0;
-    //        var winScrolled = window.pageXOffset;
-    //      
-    //    }
-    var resumeTrigger = document.getElementById("resumeTrigger");
-    var resumeContainer = document.getElementById("resumeContainer");
-    var aniResumes = document.querySelectorAll("#resumeContainer .aniResume");
-    var currentSection = document.getElementsByClassName("currentSection")[0];
-    var currentBox = 0;
-    var x = currentSection.clientHeight;
-        var y = resumeContainer.offsetTop;
-    function addConHeight(){
-       return document.getElementById("resumeContainer").style.height = x+"px"; 
-    }
-     addConHeight();
-//    var aniHeigh;
-
-    document.addEventListener("scroll", function() {
-        animationResume();
-       
-    });
-
-//        aniResumes.forEach(function(aniResume) {
-//    
-//            aniHeigh = aniResume.clientHeight;
-//        });
-
-// if (!currentSection) {
-//            aniResumes.style.display = "none";
-//        } else {
-//            aniResumes.style.display = "block";
-//        }
-    //use aniHeight, sccrollTop, window.innerHeight to calculate the scroll trigger animation //scroll move the currentSection 
-    function animationResume() {
-
-        aniResumes[currentBox].className = "aniResume";
-        currentBox = (currentBox + 1) % aniResumes.length;
-        aniResumes[currentBox].className = "aniResume currentSection";
-
-        
-    }
-//function scrollDistance(x, y){
-//     var x = x.offsetTop;
-//     var y = y.offsetTop;
-//     var z = x-y;
-//    
-//       return resumeContainer.style.height = z;
-//    
-//}
-</script>
 </body>
 
 </html>

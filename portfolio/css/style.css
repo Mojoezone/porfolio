@@ -29,7 +29,8 @@ header ul.mainNav li a.active {
   color: #95989A; }
 
 body {
-  font-family: 'Monda', sans-serif; }
+  font-family: 'Monda', sans-serif;
+  background-color: #f9f9f9; }
 
 header {
   padding: 1em 1.5em;
@@ -221,7 +222,8 @@ main {
       transition: all .5s ease; }
     .formContainer form input::placeholder,
     .formContainer form textarea::placeholder {
-      color: #95989A; }
+      color: #95989A;
+      background-color: #f9f9f9; }
     .formContainer form input:focus,
     .formContainer form textarea:focus {
       outline: none;
@@ -251,7 +253,7 @@ main {
       transition: all .2s easy-in-out; }
 
 .feedBack {
-  color: #4A606E; }
+  color: #5cb85c; }
 
 .aboutContainer {
   padding: 3em 0;
@@ -262,40 +264,21 @@ main {
     color: #95989A;
     margin: 0; }
   .aboutContainer .aboutSummery {
-    margin: 6em 0; }
+    margin-top: 6em; }
     .aboutContainer .aboutSummery h3 {
       color: #95989A; }
     .aboutContainer .aboutSummery p {
       margin-bottom: 3em;
       font-size: 1.125em;
       color: #4A606E; }
-    .aboutContainer .aboutSummery .button, .aboutContainer .aboutSummery .moreButton {
-      text-align: center;
-      padding: .5em 0;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all .2s easy-in-out; }
-  .aboutContainer #resumeContainer {
-    padding-top: 3em;
-    height: 0;
-    position: relative; }
-    .aboutContainer #resumeContainer .aniResume {
-      position: absolute;
-      opacity: 0;
-      transition: opacity .5s ease-in;
-      margin-bottom: 4em; }
-      .aboutContainer #resumeContainer .aniResume h4 {
-        color: #95989A; }
-      .aboutContainer #resumeContainer .aniResume li {
-        color: #95989A; }
-        .aboutContainer #resumeContainer .aniResume li p {
-          color: #4A606E; }
-    .aboutContainer #resumeContainer .currentSection {
-      z-index: 2;
-      opacity: 1; }
+  .aboutContainer #resumeContainer .aniResume {
+    margin-bottom: 4em; }
+    .aboutContainer #resumeContainer .aniResume h4 {
+      color: #95989A; }
+    .aboutContainer #resumeContainer .aniResume li {
+      color: #95989A; }
+      .aboutContainer #resumeContainer .aniResume li p {
+        color: #4A606E; }
 
 .portfolioContainer .plogoContainer {
   width: 100%;
@@ -336,7 +319,7 @@ main {
   .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"],
   .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
     width: 60%;
-    padding-top: 1em; }
+    padding: 1em; }
 .projectContainer .pTitleContainer .singlePIMG {
   width: 70%;
   margin: 0 auto; }
@@ -456,11 +439,9 @@ main {
     font-size: 1.2em;
     margin-top: 8em; }
     .aboutContainer blockquote {
-      font-size: 1.5em; }
+      font-size: 1.3em; }
     .aboutContainer .aboutSummery {
-      margin-top: 10em; }
-      .aboutContainer .aboutSummery #resumeTrigger {
-        margin-top: 3em; }
+      margin-top: 15em; }
 
   .formContainer {
     width: 50%;
@@ -569,6 +550,11 @@ main {
     max-width: 1500px;
     margin: 0 auto; }
 
+  .introContainer h3 {
+    margin-bottom: 1em; }
+  .introContainer .mBContainer {
+    margin-top: 5em; }
+
   .aboutContainer {
     width: 55%;
     font-size: 1.2em; }
@@ -576,6 +562,8 @@ main {
   .formContainer {
     width: 40%;
     font-size: 1.5em; }
+    .formContainer .feedBack {
+      font-size: .8em; }
     .formContainer .mailContainer a:hover {
       color: #95989A; }
 

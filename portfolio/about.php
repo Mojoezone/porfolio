@@ -10,11 +10,10 @@ include('header.php');
 
         <div class="aboutSummery">
             <h3>About Me</h3>
-            <p>I am a Chinese born American live in San Diego California with a serious face and open minded.</p>
-            <div id="resumeTrigger" class="button">Go to Resume</div>
+            <p>I am a Chinese born American live in San Diego California with a serious face and open minded. </p>
         </div>
         <div id="resumeContainer">
-            <div class="aniResume currentSection">
+            <div class="aniResume">
                 <h4>Education:</h4>
                 <ul>
                     <li>BACHELOR of SCIENCE DEGREE
@@ -31,8 +30,9 @@ include('header.php');
             <div class="aniResume">
                 <h4>Skills:</h4>
                 <ul>
-                    <li>Expert</li>
+                    <li>Expert
                     <p>HTML, CSS, Responsive</p>
+                    </li>
                     <li>Familliar
                         <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, Bootscrap 4, UI and UX</p>
                     </li>

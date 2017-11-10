@@ -6,7 +6,12 @@ $name;
 $email;
 $comment;
 
-
+function test_input($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
     
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -14,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nameErr = 'Name is required';
     }else{
         $name = test_input($_POST['name']);
-        if(!preg_match("/^[a-zA-Z]*$/", $name)){
+        if(!preg_match("/^[a-zA-Z ]*$/",$name)){
             $nameErr = 'Only letters and white space allowed';
         }
     }
@@ -32,8 +37,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }else{
         $comment = test_input($_POST['comment']);
     }
-   if('did_send' == 1){
-        echo "Thank You ".$name." I will contact you within 24 hours.";
+   if($_POST['did_send'] == 1){
+        echo "<p>Thank You ".$name." I will contact you within 24 hours.</p>";
    }else{
         echo "<p style='color: #f00'>An error has occured, please resend the message, thank you.</p>";
    }
