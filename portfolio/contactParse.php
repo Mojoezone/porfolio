@@ -37,14 +37,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }else{
         $comment = test_input($_POST['comment']);
     }
-   if($_POST['did_send'] == 1){
-        echo "<p>Thank You ".$name." I will contact you within 24 hours.</p>";
-   }else{
-        echo "<p style='color: #f00'>An error has occured, please resend the message, thank you.</p>";
-   }
+ 
+
     
-    $to = 'mojoezone@gmail.com';
-    $subject = 'Message from portfolio';
-    $header = "From: ".$email;
-    mail($to, $subject, $comment, $header);
+      if(!$nameErr && !$emailErr && !$commentErr){
+                $to = 'mojoezone@gmail.com';
+                $subject = 'Message from portfolio';
+                $header = "From: ".$email;
+                mail($to, $subject, $comment, $header);
+       if(mail($to, $subject, $comment, $header)){
+        echo "<p>Thank You ".$name." I will contact you within 24 hours.</p>";
+            }else{
+        echo "<p style='color: #f00'>An error has occured, please resend the message, thank you.</p>";
+    }
+   }
 }
