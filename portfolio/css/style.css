@@ -259,7 +259,8 @@ main {
   margin: 0 auto; }
   .aboutContainer blockquote {
     font-size: 1.125em;
-    color: #95989A; }
+    color: #95989A;
+    margin: 0; }
   .aboutContainer .aboutSummery {
     margin: 6em 0; }
     .aboutContainer .aboutSummery h3 {
@@ -278,8 +279,11 @@ main {
       cursor: pointer;
       transition: all .2s easy-in-out; }
   .aboutContainer #resumeContainer {
-    padding-top: 3em; }
+    padding-top: 3em;
+    height: 0;
+    position: relative; }
     .aboutContainer #resumeContainer .aniResume {
+      position: absolute;
       opacity: 0;
       transition: opacity .5s ease-in;
       margin-bottom: 4em; }

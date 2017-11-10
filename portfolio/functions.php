@@ -43,22 +43,18 @@ function project(){
     $result = $db->query($query);
     if($result->num_rows >= 1){
         while($row = $result->fetch_assoc()){
-            If(!$row['p_logo']){ 
+    if(!$row['p_logo']){ 
         echo '<div class="pTitleContainer">
         <h2>'.$row['p_name'].'</h2>';
     }else{
         echo '<div class="pTitleContainer">
         <h2><img src="'.$row['p_logo'].'" alt="'.$row['p_name'].'" >'.'</h2>';
     }
-    
-            echo '<div  class="singlePIMG"><picture><source media="(min-width: 1280px)" srcset="'.$row['p_d_image'].'"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></picture></div>' ;
-//   if(!$row['p_m_image']){ 
-//       echo '<div class="singlePIMG"><img src="'.$row['p_d_image'].'" alt="'.$row['p_name'].'"></div>';
-//   }else{
-//      echo '<div  class="singlePIMG"><img src="'.$row['p_m_image'].'" alt="'.$row['p_name'].'"></div>' ;
-//   }
+    ?>
+            <div  class="singlePIMG"><picture><source media="(min-width: 1280px)" srcset="<?php echo $row['p_d_image']; ?>"><img src="<?php  echo $row['p_m_image']; ?>" alt="<?php if($row['p_name'] == 'Goblin Exile'){echo 'Desktop Only';}else{ echo $row['p_name'];} ?>"></picture></div> 
 
 
+<?php
     echo
    ' </div>
     <div class="pCaseStudy clearfix">

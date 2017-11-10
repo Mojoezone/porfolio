@@ -342,6 +342,7 @@ main {
     blockquote {
         font-size: 1.125em;
         color: $mainColor;
+        margin: 0;
     }
     .aboutSummery {
         margin: 6em 0;
@@ -367,7 +368,10 @@ main {
     }
     #resumeContainer {
         padding-top: 3em;
+        height: 0;
+        position: relative;
         .aniResume{
+            position: absolute;
             opacity: 0;
             transition: opacity .5s ease-in;
             margin-bottom: 4em;
