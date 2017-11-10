@@ -15,6 +15,7 @@ $urlName = basename($urlName, '.php');
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php echo get_title();?></title>
         <link rel="shortcut icon" href="images/logo.ico">
+        <link rel="apple-touch-icon" href="images/logo.png" >
         <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
