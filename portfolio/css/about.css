@@ -1,0 +1,46 @@
+.button {
+  background-color: #4A606E;
+  color: #e4e4e4; }
+
+.aboutContainer {
+  padding: 3em 0;
+  width: 80%;
+  margin: 0 auto; }
+  .aboutContainer blockquote {
+    font-size: 1.125em;
+    color: #95989A;
+    margin: 0;
+    background-color: #4A606E;
+    padding: 1em 2em; }
+  .aboutContainer .aboutSummery {
+    margin-top: 6em; }
+    .aboutContainer .aboutSummery h3 {
+      color: #95989A; }
+    .aboutContainer .aboutSummery p {
+      margin-bottom: 3em;
+      font-size: 1.125em;
+      color: #4A606E; }
+  .aboutContainer #resumeContainer {
+    margin-bottom: 6em; }
+    .aboutContainer #resumeContainer .aniResume {
+      margin-bottom: 4em; }
+      .aboutContainer #resumeContainer .aniResume h4 {
+        color: #95989A; }
+      .aboutContainer #resumeContainer .aniResume li {
+        color: #95989A; }
+        .aboutContainer #resumeContainer .aniResume li p {
+          color: #4A606E;
+          font-weight: 700; }
+
+@media only screen and (min-width: 768px) {
+  .aboutContainer {
+    font-size: 1.2em;
+    margin-top: 8em; }
+    .aboutContainer blockquote {
+      font-size: 1.3em; } }
+@media only screen and (min-width: 1280px) {
+  .aboutContainer {
+    width: 55%;
+    font-size: 1.2em; } }
+
+/*# sourceMappingURL=about.css.map */

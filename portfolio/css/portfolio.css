@@ -1,0 +1,52 @@
+.button {
+  background-color: #4A606E;
+  color: #e4e4e4; }
+
+.portfolioContainer .plogoContainer {
+  width: 100%;
+  background-color: #4A606E;
+  margin: 5em 0;
+  text-align: center;
+  padding-top: .5em; }
+  .portfolioContainer .plogoContainer h3 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0;
+    background-color: #95989A;
+    margin-top: 1em; }
+    .portfolioContainer .plogoContainer h3 a {
+      font-size: 1.5em;
+      color: #4A606E; }
+      .portfolioContainer .plogoContainer h3 a img {
+        width: 100%;
+        height: auto; }
+.portfolioContainer .plogoContainer:nth-child(even) h3 {
+  padding: 3em 0; }
+  .portfolioContainer .plogoContainer:nth-child(even) h3 img {
+    height: 2.5em; }
+.portfolioContainer .plogoContainer:nth-child(3) h3 {
+  padding: 4em 0; }
+.portfolioContainer .pLanguage {
+  font-size: .9em;
+  color: #e4e4e4;
+  line-height: 2em;
+  padding-bottom: 1em; }
+
+@media only screen and (min-width: 768px) {
+  .portfolioContainer {
+    margin: 8em 0; }
+    .portfolioContainer .plogoContainer {
+      width: 45%;
+      float: left;
+      margin: 0 2.5% 5em 2.5%; }
+      .portfolioContainer .plogoContainer h3 {
+        width: 100%; }
+        .portfolioContainer .plogoContainer h3 img[src="images/fashionFamily.svg"] {
+          height: 5.1em; } }
+@media only screen and (min-width: 1280px) {
+  .portfolioContainer {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 8em; } }
+
+/*# sourceMappingURL=portfolio.css.map */

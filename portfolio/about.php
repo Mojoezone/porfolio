@@ -9,8 +9,8 @@ include('header.php');
             <small>Tim Notke</small></blockquote>
 
         <div class="aboutSummery">
-            <h3>About Me</h3>
-            <p>I am a Chinese born American live in San Diego California with a serious face and open minded. </p>
+            <h3>Project Process</h3>
+            <p><strong>Define, Design, Develop, Debug and Deliver</strong> on time for all projects. <br>Define by research, sketch on paper and Design in Xd/PSD/ browser/AI, Develop in HTML5, CSS3/bootstrap, Javascript/jQuery, PHP and MYSQL, Debug in Firefox and Chrome, Deliver to you.</p>
         </div>
         <div id="resumeContainer">
             <div class="aniResume">
@@ -37,10 +37,10 @@ include('header.php');
                         <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, Bootscrap 4, UI and UX</p>
                     </li>
                     <li>Experienced
-                        <p>Node, XML, FTL</p>
+                        <p>Node, XML, FTL, spike</p>
                     </li>
                     <li>Programs:
-                        <p>Atom, Brackets, PS, AI, IN</p>
+                        <p>Atom, Brackets, Xd, PS, AI, IN</p>
                     </li>
                 </ul>
             </div>

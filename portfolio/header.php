@@ -19,7 +19,8 @@ $urlName = basename($urlName, '.php');
         <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
-        <link type="text/css" rel="stylesheet" href="css/<?php echo $urlName; ?>.css">
+        <?php if($urlName == 'index'){}else{ ?>
+        <link type="text/css" rel="stylesheet" href="css/<?php echo $urlName; ?>.css"> <?php } ?>
     </head>
 
     <body>

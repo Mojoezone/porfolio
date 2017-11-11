@@ -1,0 +1,74 @@
+.button, .formContainer form .button {
+  background-color: #4A606E;
+  color: #e4e4e4; }
+
+.formContainer {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 6em;
+  padding-top: 5em; }
+  .formContainer .mailContainer {
+    margin-bottom: 3em; }
+    .formContainer .mailContainer a {
+      color: #4A606E; }
+  .formContainer form {
+    font-size: 1em; }
+    .formContainer form input,
+    .formContainer form textarea {
+      margin-bottom: 1.5em;
+      background-color: #f9f9f9;
+      color: #4A606E;
+      border: none;
+      border-bottom: 1px solid #95989A;
+      width: 100%;
+      transition: all .5s ease; }
+    .formContainer form input::placeholder,
+    .formContainer form textarea::placeholder {
+      color: #95989A; }
+    .formContainer form input:focus,
+    .formContainer form textarea:focus {
+      outline: none;
+      border-bottom: 1px solid #4A606E; }
+    .formContainer form textarea:focus {
+      height: 8em; }
+    .formContainer form input,
+    .formContainer form textarea,
+    .formContainer form .button {
+      display: block;
+      padding: 1em 0 .5em 0; }
+    .formContainer form textarea {
+      resize: none;
+      padding-bottom: 0;
+      height: 2.5em; }
+    .formContainer form .button {
+      width: 5em;
+      border: none;
+      border-bottom: 1px solid #95989A;
+      margin-top: 2em;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      padding: .5em 1em;
+      transition: all .2s easy-in-out; }
+
+.feedBack {
+  color: #5cb85c; }
+
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 6em;
+    padding-top: 8em; } }
+@media only screen and (min-width: 1280px) {
+  .formContainer {
+    margin-bottom: 8em;
+    width: 40%;
+    font-size: 1.2em; }
+    .formContainer .feedBack {
+      font-size: .8em; }
+    .formContainer .mailContainer a:hover {
+      color: #95989A; } }
+
+/*# sourceMappingURL=contact.css.map */

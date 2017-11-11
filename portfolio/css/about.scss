@@ -1,0 +1,81 @@
+$myColor: #4A606E;
+$mainColor: #95989A;
+$textWhite: #e4e4e4;
+$bgColor: #f9f9f9;
+.button {
+    background-color: $myColor;
+    color: $textWhite;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//.............................about me .........................
+.aboutContainer {
+    padding: 3em 0;
+    width: 80%;
+    margin: 0 auto;
+    blockquote {
+        font-size: 1.125em;
+        color: $mainColor;
+        margin: 0;
+        background-color: #4A606E;
+        padding: 1em 2em;
+    }
+    .aboutSummery {
+        margin-top: 6em;
+        h3 {
+            color: $mainColor;
+        }
+        p {
+            margin-bottom: 3em;
+            font-size: 1.125em;
+            color: $myColor;
+        }
+    }
+    #resumeContainer {
+        margin-bottom: 6em;
+        .aniResume {
+            margin-bottom: 4em;
+            h4 {
+                color: $mainColor;
+            }
+            li {
+                color: $mainColor;
+                p {
+                    color: $myColor;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+}
+
+//................................end about me.........................
+//............................media query ..............................
+@media only screen and (min-width: 768px) {
+    //........aboutContainer.......
+    .aboutContainer {
+        font-size: 1.2em;
+        margin-top: 8em;
+        blockquote {
+            font-size: 1.3em;
+        }
+        .aboutSummery {}
+    }
+
+}
+
+//...........................................media 1280px.........................................
+@media only screen and (min-width: 1280px) {
+    //.......................about.................
+    .aboutContainer {
+        width: 55%;
+        font-size: 1.2em;
+    }
+}

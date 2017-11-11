@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.button, .moreButton, .formContainer form .button {
+.button, .moreButton {
   background-color: #4A606E;
   color: #e4e4e4; }
 
@@ -13,7 +13,7 @@
 a {
   text-decoration: none; }
 
-.button:hover, .moreButton:hover, .formContainer form .button:hover,
+.button:hover, .moreButton:hover,
 .moreButton:hover {
   color: #95989A;
   box-shadow: 1px 1px 1px rgba(74, 96, 110, 0.5); }
@@ -58,7 +58,7 @@ header {
   position: fixed;
   top: 0;
   background-color: #4A606E;
-  transition: all .2s easy-in-out; }
+  transition: all .5s easy-in-out; }
 
 .mobileOpen {
   color: #95989A;
@@ -202,179 +202,6 @@ main {
   padding: .2em 1em;
   transition: all .2s easy-in-out; }
 
-.formContainer {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 3em;
-  padding-top: 5em; }
-  .formContainer .mailContainer {
-    margin-bottom: 3em; }
-    .formContainer .mailContainer a {
-      color: #4A606E; }
-  .formContainer form {
-    font-size: 1em; }
-    .formContainer form input,
-    .formContainer form textarea {
-      background-color: #f9f9f9;
-      color: #4A606E;
-      border: none;
-      border-bottom: 1px solid #95989A;
-      width: 100%;
-      transition: all .5s ease; }
-    .formContainer form input::placeholder,
-    .formContainer form textarea::placeholder {
-      color: #95989A; }
-    .formContainer form input:focus,
-    .formContainer form textarea:focus {
-      outline: none;
-      border-bottom: 1px solid #4A606E; }
-    .formContainer form textarea:focus {
-      height: 8em; }
-    .formContainer form input,
-    .formContainer form textarea,
-    .formContainer form .moreButton,
-    .formContainer form .button {
-      display: block;
-      padding: 1em 0 .5em 0; }
-    .formContainer form textarea {
-      resize: none;
-      padding-bottom: 0;
-      height: 2.5em; }
-    .formContainer form .moreButton, .formContainer form .button {
-      width: 5em;
-      border: none;
-      border-bottom: 1px solid #95989A;
-      margin-top: 2em;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      border-radius: 5px;
-      padding: .5em 1em;
-      transition: all .2s easy-in-out; }
-
-.feedBack {
-  color: #5cb85c; }
-
-.aboutContainer {
-  padding: 3em 0;
-  width: 80%;
-  margin: 0 auto; }
-  .aboutContainer blockquote {
-    font-size: 1.125em;
-    color: #95989A;
-    margin: 0; }
-  .aboutContainer .aboutSummery {
-    margin-top: 6em; }
-    .aboutContainer .aboutSummery h3 {
-      color: #95989A; }
-    .aboutContainer .aboutSummery p {
-      margin-bottom: 3em;
-      font-size: 1.125em;
-      color: #4A606E; }
-  .aboutContainer #resumeContainer .aniResume {
-    margin-bottom: 4em; }
-    .aboutContainer #resumeContainer .aniResume h4 {
-      color: #95989A; }
-    .aboutContainer #resumeContainer .aniResume li {
-      color: #95989A; }
-      .aboutContainer #resumeContainer .aniResume li p {
-        color: #4A606E; }
-
-.portfolioContainer .plogoContainer {
-  width: 100%;
-  background-color: #4A606E;
-  margin: 5em 0;
-  text-align: center;
-  padding-top: .5em; }
-  .portfolioContainer .plogoContainer h3 {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1em 0;
-    background-color: #95989A;
-    margin-top: 1em; }
-    .portfolioContainer .plogoContainer h3 a {
-      font-size: 1.5em;
-      color: #4A606E; }
-      .portfolioContainer .plogoContainer h3 a img {
-        width: 100%;
-        height: auto; }
-.portfolioContainer .plogoContainer:nth-child(even) h3 {
-  padding: 3em 0; }
-  .portfolioContainer .plogoContainer:nth-child(even) h3 img {
-    height: 2.5em; }
-.portfolioContainer .plogoContainer:nth-child(3) h3 {
-  padding: 4em 0; }
-.portfolioContainer .pLanguage {
-  font-size: .9em;
-  color: #e4e4e4;
-  line-height: 2em;
-  padding-bottom: 1em; }
-
-.projectContainer .pTitleContainer h2 {
-  font-size: 2em;
-  line-height: 3em;
-  color: #95989A;
-  text-align: center;
-  background-color: #4A606E; }
-  .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"],
-  .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
-    width: 60%;
-    padding: 1em; }
-.projectContainer .pTitleContainer .singlePIMG {
-  width: 70%;
-  margin: 0 auto; }
-  .projectContainer .pTitleContainer .singlePIMG img {
-    width: 100%;
-    height: auto; }
-.projectContainer .pCaseStudy {
-  margin-top: 4em;
-  padding: 0 .8em; }
-  .projectContainer .pCaseStudy h3 {
-    color: #95989A;
-    margin-bottom: 0;
-    line-height: 3em; }
-  .projectContainer .pCaseStudy p {
-    margin-top: 0;
-    margin-bottom: 2em;
-    color: #4A606E; }
-.projectContainer .buttonContainer {
-  text-align: center; }
-  .projectContainer .buttonContainer .button, .projectContainer .buttonContainer .moreButton {
-    padding: .5em 1em;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    transition: all .2s easy-in-out; }
-
-.otherProjects {
-  background-color: #95989A;
-  padding: 2em 0;
-  margin: 15em 0 2em 0;
-  text-align: center; }
-  .otherProjects .otherProject {
-    width: 80%;
-    background-color: #4A606E;
-    margin: 0 auto;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    border-radius: 12px; }
-    .otherProjects .otherProject h3 {
-      margin-bottom: 0; }
-      .otherProjects .otherProject h3 img {
-        width: 100%;
-        box-shadow: 1px 1px 2px #4A606E;
-        -webkit-border-radius: 13px;
-        -moz-border-radius: 13px;
-        -ms-border-radius: 13px;
-        border-radius: 13px; }
-    .otherProjects .otherProject p {
-      font-size: .9em;
-      margin-top: 0;
-      color: #95989A;
-      padding-bottom: .5em; }
-
 @media only screen and (min-width: 768px) {
   .tabletOpen {
     color: #95989A;
@@ -433,55 +260,7 @@ main {
     main .introContainer h3 {
       font-size: 1.3em; }
     main .introContainer h2 {
-      font-size: 1.5em; }
-
-  .aboutContainer {
-    font-size: 1.2em;
-    margin-top: 8em; }
-    .aboutContainer blockquote {
-      font-size: 1.3em; }
-    .aboutContainer .aboutSummery {
-      margin-top: 15em; }
-
-  .formContainer {
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 3em;
-    padding-top: 8em; }
-
-  .portfolioContainer {
-    margin: 8em 0; }
-    .portfolioContainer .plogoContainer {
-      width: 45%;
-      float: left;
-      margin: 0 2.5% 5em 2.5%; }
-      .portfolioContainer .plogoContainer h3 {
-        width: 100%; }
-        .portfolioContainer .plogoContainer h3 img[src="images/fashionFamily.svg"] {
-          height: 5.1em; }
-
-  .projectContainer .pTitleContainer {
-    min-height: 26.5em;
-    background-color: #4A606E; }
-    .projectContainer .pTitleContainer h2 {
-      width: 50%;
-      float: right;
-      padding-top: 2em; }
-      .projectContainer .pTitleContainer h2 img[src="images/bikeshop.svg"],
-      .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
-        width: 50%; }
-    .projectContainer .pTitleContainer .singlePIMG {
-      width: 50%;
-      float: left;
-      padding: 5% 2%; }
-  .projectContainer .pCaseStudy {
-    padding: 4em 5%; }
-
-  .otherProjects .otherProject {
-    width: 25%;
-    float: left;
-    margin: 2em 4.1666%;
-    background-color: transparent; } }
+      font-size: 1.5em; } }
 @media only screen and (min-width: 1280px) {
   #mobileMenu {
     display: none; }
@@ -553,39 +332,7 @@ main {
   .introContainer h3 {
     margin-bottom: 1em; }
   .introContainer .mBContainer {
-    margin-top: 5em; }
-
-  .aboutContainer {
-    width: 55%;
-    font-size: 1.2em; }
-
-  .formContainer {
-    width: 40%;
-    font-size: 1.5em; }
-    .formContainer .feedBack {
-      font-size: .8em; }
-    .formContainer .mailContainer a:hover {
-      color: #95989A; }
-
-  .portfolioContainer {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 8em; }
-
-  .projectContainer {
-    margin-top: 1em; }
-    .projectContainer .pTitleContainer h2 {
-      width: 40%;
-      margin-right: 10%;
-      font-size: 3em; }
-      .projectContainer .pTitleContainer h2 img[src="images/fashionFamily.svg"] {
-        width: 70%; }
-    .projectContainer .pTitleContainer .singlePIMG {
-      width: 40%;
-      padding: 5% 5%;
-      margin-left: 5%; }
-    .projectContainer .pCaseStudy {
-      padding: 4em 10%; } }
+    margin-top: 5em; } }
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?36130799");

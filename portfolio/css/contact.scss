@@ -1,0 +1,110 @@
+//...................................var.................................
+$myColor: #4A606E;
+$mainColor: #95989A;
+$textWhite: #e4e4e4;
+$bgColor: #f9f9f9;
+.button {
+    background-color: $myColor;
+    color: $textWhite;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//...................................contact............................
+.formContainer {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 6em;
+    padding-top: 5em;
+    .mailContainer {
+        margin-bottom: 3em;
+        a {
+            color: $myColor;
+        }
+    }
+    form {
+        font-size: 1em;
+        input,
+        textarea {
+            margin-bottom: 1.5em;
+             background-color: $bgColor ;
+            color: $myColor;
+            border: none;
+            border-bottom: 1px solid $mainColor;
+            width: 100%;
+            transition: all .5s ease;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: $mainColor;
+        }
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-bottom: 1px solid $myColor;
+        }
+        textarea:focus {
+            height: 8em;
+        }
+        input,
+        textarea,
+        .button {
+            display: block;
+            padding: 1em 0 .5em 0;
+        }
+        textarea {
+            resize: none;
+            padding-bottom: 0;
+            height: 2.5em;
+        }
+        .button {
+            width: 5em;
+            border: none;
+            border-bottom: 1px solid $mainColor;
+            margin-top: 2em;
+            @extend .button;
+            @include border-radius(5px);
+            padding: .5em 1em;
+            transition: all .2s easy-in-out;
+        }
+    }
+}
+
+.feedBack {
+    color: #5cb85c;
+}
+
+//.................................end Contact.............................
+@media only screen and (min-width: 768px) {
+     //..............contact.........
+    .formContainer {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 6em;
+        padding-top: 8em;
+    } 
+}
+
+//...........................................media 1280px.........................................
+@media only screen and (min-width: 1280px) {
+      //.....................contact...................
+    .formContainer {
+        margin-bottom: 8em;
+        width: 40%;
+        font-size: 1.2em;
+        .feedBack{
+            font-size: .8em;
+        }
+        .mailContainer {
+            a:hover {
+                color: $mainColor;
+            }
+        }
+    } 
+   
+}
