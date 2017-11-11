@@ -65,16 +65,9 @@
 
      //....check if document height has more than 100 px than the viewport height...
      //     eventhandler(window, "scroll", scrollDetection);
-function compareHeight(){
-    if(docHeight >= winHeight + 300){
-        scrollDetection();
-        
-    }else{
-     stickyHeader.classList = "";
-    }
-}
+
      function scrollDetection(e) {
-         if (stickyOffset < window.pageYOffset) {
+         if (docHeight >= winHeight + 300 && stickyOffset < window.pageYOffset) {
              imgToggle.src = "images/logoFaded.png";
              stickyHeader.classList.add("stickyNav");
              mobileMenu.style.color = "#95989A";
@@ -93,7 +86,7 @@ function compareHeight(){
              mobileMenu.style.color = "#4A606E";
          }
      }
-     window.addEventListener("scroll", compareHeight);
+     window.addEventListener("scroll", scrollDetection);
      //..............end checking width............
      //     eventhandler(mobileMenu, "click", menuTrigger);
 
