@@ -168,5 +168,6 @@
 
 
      //...................animation resume in about page............   
+//........................dectect landscape orientation.....
 
  })();

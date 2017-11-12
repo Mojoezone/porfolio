@@ -46,9 +46,10 @@ header ul.mainNav li a.active {
     font-weight: 700;
 }
 
-.codes{
+.codes {
     color: $mainColor;
 }
+
 //..............................css...........................
 body {
     font-family: 'Monda', sans-serif;
@@ -342,8 +343,9 @@ main {
         h2 {
             font-size: 1.5em;
         }
-    }  
+    }
 }
+
 //.............................................end 768px ........................................
 //...........................................media 1280px.........................................
 @media only screen and (min-width: 1280px) {
@@ -415,23 +417,63 @@ main {
         }
     } //.....................nav.....................
     //...........................main..............
-    main{
+    main {
         max-width: 1500px;
         margin: 0 auto;
-    }
-    //................index home................
-    .introContainer{
-        h3{
+    } //................index home................
+    .introContainer {
+        h3 {
             margin-bottom: 1em;
         }
-        .mBContainer{
+        .mBContainer {
             margin-top: 5em;
         }
-    } 
- 
-  
+    }
+
+
 }
+
 //............................................end media query 1280px .............................
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+    #mainNavContainer {
+        .mainNav {
+            padding-top: 0;
+            padding-top: 1em;
+            padding-left: 4em;
+            li {
+                padding-right: 2em;
+                display: inline;
+                a {
+                    font-size: 1em;
+                }
+                #openSubNav{
+                    position: absolute;
+                    top: 0;
+                    padding: 0;
+                    padding-left: .8em;
+                    padding-right: .5em;
+                }
+            }
+            .subNavContainer{
+                position: relative;
+                .subNav {
+                    width: 40em;
+                    position: absolute;
+                    top: 3em;
+                    left: 0;
+                    li{ 
+                        display: inline-block;
+//                        padding: 0;
+                        }
+                }
+            }
+        }
+//        .mailContainer{
+//            text-align: right;
+//        }
+    }
+}
+
 //..................................fontello ...............................................
 @font-face {
     font-family: 'fontello';

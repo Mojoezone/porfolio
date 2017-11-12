@@ -333,6 +333,31 @@ main {
     margin-bottom: 1em; }
   .introContainer .mBContainer {
     margin-top: 5em; } }
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  #mainNavContainer .mainNav {
+    padding-top: 0;
+    padding-top: 1em;
+    padding-left: 4em; }
+    #mainNavContainer .mainNav li {
+      padding-right: 2em;
+      display: inline; }
+      #mainNavContainer .mainNav li a {
+        font-size: 1em; }
+      #mainNavContainer .mainNav li #openSubNav {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        padding-left: .8em;
+        padding-right: .5em; }
+    #mainNavContainer .mainNav .subNavContainer {
+      position: relative; }
+      #mainNavContainer .mainNav .subNavContainer .subNav {
+        width: 40em;
+        position: absolute;
+        top: 3em;
+        left: 0; }
+        #mainNavContainer .mainNav .subNavContainer .subNav li {
+          display: inline-block; } }
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?36130799");

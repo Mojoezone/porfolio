@@ -31,7 +31,7 @@ include('header.php');
                 <h4>Skills:</h4>
                 <ul>
                     <li>Expert
-                    <p>HTML, CSS, Responsive</p>
+                        <p>HTML, CSS, Responsive</p>
                     </li>
                     <li>Familliar
                         <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, Bootscrap 4, UI and UX</p>
@@ -53,6 +53,18 @@ include('header.php');
                     <li>Others
                         <p>2 year as driver Uber and Lyft 2015-217</p>
                         <p>10 plus years in restaurant business</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="aniResume">
+                <h4>About The Website:</h4>
+                <ul>
+                    <li>Language used
+                        <p>Vanilla Javascript, custome css, html, PHP and MYSQL</p>
+                    </li>
+                    <li>Design and develop
+                        <p>Responsive first designed and developed. Documented in my Github repository.</p>
+                        
                     </li>
                 </ul>
             </div>
