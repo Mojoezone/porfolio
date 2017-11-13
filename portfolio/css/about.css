@@ -27,8 +27,11 @@
       .aboutContainer #resumeContainer .aniResume h4 {
         color: #95989A; }
       .aboutContainer #resumeContainer .aniResume li {
-        color: #95989A; }
+        margin-bottom: 1em;
+        color: #95989A;
+        list-style-type: none; }
         .aboutContainer #resumeContainer .aniResume li p {
+          margin: 0;
           color: #4A606E;
           font-weight: 700; }
 

@@ -117,12 +117,12 @@ header {
 
 .mainNav {
     margin: 0;
-    padding: 4em 0 4em 2em;
+    padding: 2em 0 2em 4em;
     clear: both;
 }
 
 .mainNav li {
-    padding: .5em 1em;
+    padding: .5em;
 }
 
 .mainNav li a {
@@ -157,13 +157,18 @@ header .subNav {
     padding: 0;
 }
 
+header .subNav li{
+    padding-left: 0;
+}
+
 header .subNav li a {
     padding: 0;
     line-height: .5em;
+    font-weight: 400;
 }
 
 .mailContainer {
-    //    text-align: center;
+//        padding-left: 4.5em;
     a {
         color: $mainColor;
     }
@@ -294,7 +299,7 @@ main {
             padding: 1em 1.5em 0 0;
         }
         ul.mainNav {
-            padding-top: 5em;
+            padding-top: 2em;
             padding-left: 0;
             padding-left: 1em;
             background-color: $myColor;
@@ -305,7 +310,7 @@ main {
         .mailContainer {
             font-size: .9em;
             background-color: $myColor;
-            padding: 0 0 100% 1em;
+            padding: 0 0 100% 1.5em;
         }
 
     } //.......body width when tablet menu open.....
@@ -435,42 +440,48 @@ main {
 
 //............................................end media query 1280px .............................
 @media only screen and (max-width: 736px) and (orientation: landscape) {
-    #mainNavContainer {
+    #mainNavContainer {  
         .mainNav {
+            margin-left: 4.5em;
             padding-top: 0;
-            padding-top: 1em;
-            padding-left: 4em;
+            padding-top: 2em;
+            padding-left: 0;
             li {
-                padding-right: 2em;
+                padding-right: 2.5em;
+                padding-left: 0;
                 display: inline;
                 a {
-                    font-size: 1em;
-                }
-                #openSubNav{
+                    font-size: 1.1em;
+                }        
+            }
+            .subNavContainer{
+                position: relative;
+                margin-right: 2em;
+                 #openSubNav{
                     position: absolute;
                     top: 0;
                     padding: 0;
                     padding-left: .8em;
                     padding-right: .5em;
                 }
-            }
-            .subNavContainer{
-                position: relative;
                 .subNav {
                     width: 40em;
                     position: absolute;
-                    top: 3em;
+                    top: 4em;
                     left: 0;
                     li{ 
                         display: inline-block;
-//                        padding: 0;
+//                       
+                        a{
+                            font-weight: 700;
+                        }
                         }
                 }
             }
         }
-//        .mailContainer{
-//            text-align: right;
-//        }
+        .mailContainer{
+            margin-top: 1.5em;
+        }
     }
 }
 

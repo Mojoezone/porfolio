@@ -57,7 +57,7 @@ include('header.php');
                 </ul>
             </div>
             <div class="aniResume">
-                <h4>About The Website:</h4>
+                <h4>About This Website:</h4>
                 <ul>
                     <li>Language used
                         <p>Vanilla Javascript, custome css, html, PHP and MYSQL</p>
