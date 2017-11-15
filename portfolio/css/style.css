@@ -58,7 +58,8 @@ header {
   position: fixed;
   top: 0;
   background-color: #4A606E;
-  transition: all .5s easy-in-out; }
+  transition: all .5s easy-in-out;
+  border-bottom: 1px solid rgba(149, 152, 154, 0.5); }
 
 .mobileOpen {
   color: #95989A;

@@ -91,6 +91,7 @@ header {
     top: 0;
     background-color: $myColor;
     transition: all .5s easy-in-out;
+    border-bottom: 1px solid rgba($mainColor, .5);
 }
 
 //....................mobile navigation nav is open.................

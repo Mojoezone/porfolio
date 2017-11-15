@@ -86,7 +86,24 @@
              mobileMenu.style.color = "#4A606E";
          }
      }
+
+//     function stickyInOut() {
+//         var y = document.body.clientHeight;
+//         var x = window.pageYOffset;
+//         var curPos = y - x;
+//
+//
+//         if (y-x == curPos) {
+//             return false;
+//         } else {
+//             scrollDetection();
+//         }
+//     }
+     //.................detect scroll action.....
+
+     //get the current value of x, and the current x value - the past value,
      window.addEventListener("scroll", scrollDetection);
+
      //..............end checking width............
      //     eventhandler(mobileMenu, "click", menuTrigger);
 
@@ -168,6 +185,6 @@
 
 
      //...................animation resume in about page............   
-//........................dectect landscape orientation.....
+     //........................dectect landscape orientation.....
 
  })();
