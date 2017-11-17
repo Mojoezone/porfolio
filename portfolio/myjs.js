@@ -86,17 +86,18 @@
              mobileMenu.style.color = "#4A606E";
          }
      }
-
+//     var pyset = window.pageYOffset;
+//     var curPos;
+//    setInterval(stickyInOut, 1000);
+//     var pos;
+//     var timer = 0;
+//
 //     function stickyInOut() {
-//         var y = document.body.clientHeight;
-//         var x = window.pageYOffset;
-//         var curPos = y - x;
-//
-//
-//         if (y-x == curPos) {
-//             return false;
-//         } else {
-//             scrollDetection();
+//         curPos = window.pageYOffset;
+//         pos = curPos;
+//         console.log(pos, curPos);
+//         if (curPos) {
+//             timer ++;
 //         }
 //     }
      //.................detect scroll action.....
