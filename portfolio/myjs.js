@@ -100,6 +100,10 @@
 //             timer ++;
 //         }
 //     }
+//     if(x){
+//       console.log("yes");  
+//     }
+        var x = window.addEventListener("scroll", scrollDetection);
      //.................detect scroll action.....
 
      //get the current value of x, and the current x value - the past value,
