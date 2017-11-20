@@ -87,6 +87,7 @@ header {
 //display none
 //...............sticky nav..............
 .stickyNav {
+    z-index: 9999;
     position: fixed;
     top: 0;
     background-color: $myColor;

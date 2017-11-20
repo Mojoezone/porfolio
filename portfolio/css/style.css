@@ -55,6 +55,7 @@ header {
   display: none; }
 
 .stickyNav {
+  z-index: 9999;
   position: fixed;
   top: 0;
   background-color: #4A606E;
