@@ -3,6 +3,7 @@ include('header.php');
 ?>
 
 <main>
+  
     <div class="aboutContainer">
 
         <blockquote>"Hard work beats talent when talent fails to work hard."
@@ -16,8 +17,8 @@ include('header.php');
             <div class="aniResume">
                 <h4>Education:</h4>
                 <ul>
-                    <li>Platt College San Diego
-                        <p>BACHELOR of SCIENCE DEGREE</p>
+                    <li>Platt College San Diego 2015-2017
+                        <p>BACHELOR OF SCIENCE MEDIA ARTS - WEB DESIGN AND DEVELOPING </p>
                     </li>
                     <li>Codecademy
                         <p>Coursework - HTML, CSS, Javascript, SQL, GIT, React</p>
@@ -37,10 +38,10 @@ include('header.php');
                         <p> Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, Bootscrap 4, UI and UX</p>
                     </li>
                     <li>Experienced
-                        <p>Node, XML, FTL, spike</p>
+                        <p>Node, XML, FTL, Spike</p>
                     </li>
                     <li>Programs:
-                        <p>Atom, Brackets, Xd, PS, AI, IN</p>
+                        <p>Atom, Brackets, Xd, Photoshop, AI, Indesign</p>
                     </li>
                 </ul>
             </div>
@@ -70,7 +71,7 @@ include('header.php');
                 </ul>
             </div>
         </div>
-
+  <a class="button dlButton" href="images/mo_joe_resume.pdf" download="Joe Mo's Resume">Download Resume</a>
     </div>
 </main>
 

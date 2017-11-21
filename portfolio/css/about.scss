@@ -57,6 +57,11 @@ $bgColor: #f9f9f9;
         }
 
     }
+    .dlButton {
+        margin-top: 2em;
+        padding: .25em .5em;
+        font-size: 0.8em;
+    }
 }
 
 //................................end about me.........................
@@ -75,7 +80,7 @@ $bgColor: #f9f9f9;
 }
 
 //...........................................media 1280px.........................................
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1280px) {
     //.......................about.................
     .aboutContainer {
         width: 55%;
