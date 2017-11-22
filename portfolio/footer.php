@@ -54,7 +54,7 @@
     <p class="copyRight">&copy;<span id="currentYear"></span> mojoezone.com All Right Reserved.</p>
 </footer>
 <script type="text/javascript" src="myjs.js"></script>
-
+<script type="text/javascript" src="pictureFill.js"></script>
 </body>
 
 </html>
