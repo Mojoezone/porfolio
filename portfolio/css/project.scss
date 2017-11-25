@@ -28,6 +28,9 @@ $bgColor: #f9f9f9;
                 width: 60%;
                 padding: 1em;
             }
+            a[href='http://mojoezone.com/GoblinExile/goblinExile.html']{
+                color: $mainColor;
+            }
         }
         .singlePIMG {
             width: 70%;

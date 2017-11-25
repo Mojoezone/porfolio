@@ -12,6 +12,8 @@
   .projectContainer .pTitleContainer h2 img[src="images/shield.svg"] {
     width: 60%;
     padding: 1em; }
+  .projectContainer .pTitleContainer h2 a[href='http://mojoezone.com/GoblinExile/goblinExile.html'] {
+    color: #95989A; }
 .projectContainer .pTitleContainer .singlePIMG {
   width: 70%;
   margin: 0 auto; }
