@@ -19,6 +19,7 @@ $p_id = $_GET['p_id'];
     ?>
     <div class="otherProject">
         <h3><a href="project.php?p_id=<?php echo $row['p_id'];  ?>"><img src="<?php echo $row['p_d_image']; ?>" alt="<?php echo $row['p_name'] ?>"></a></h3>
+        <h4><?php echo $row['p_name'] ?></h4>
         <p><?php echo $row['p_language']; ?></p>
     </div>
     <?php

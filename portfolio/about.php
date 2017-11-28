@@ -11,7 +11,7 @@ include('header.php');
 
         <div class="aboutSummery">
             <h3>Project Process</h3>
-            <p><strong>Define, Design, Develop, Debug and Deliver</strong> on time for all projects. <br>Define by research, sketch on paper and Design in Xd/PSD/ browser/AI, Develop in HTML5, CSS3/bootstrap, Javascript/jQuery, PHP and MYSQL, Debug in devices and modern browsers, Deliver to you.</p>
+            <p><strong>Define, Design, Develop, Debug and Deliver on time for all projects.</strong> Define by research, sketch on paper and Design in Xd/PSD/ browser/AI, Develop in HTML5, CSS3/bootstrap, Javascript/jQuery, PHP and MYSQL, Debug in devices and modern browsers, Deliver to you.</p>
         </div>
         <div id="resumeContainer">
             <div class="aniResume">
@@ -71,7 +71,7 @@ include('header.php');
                 </ul>
             </div>
         </div>
-  <a class="button dlButton" href="images/mo_joe_resume.pdf" download="Joe Mo's Resume">Download Resume</a>
+  <a class="button dlButton" href="images/mo_joe_resume.pdf" download="Joe Mo's Resume">Download Resume PDF</a>
     </div>
 </main>
 

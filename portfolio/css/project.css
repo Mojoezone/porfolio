@@ -64,6 +64,9 @@
         -moz-border-radius: 13px;
         -ms-border-radius: 13px;
         border-radius: 13px; }
+    .otherProjects .otherProject h4 {
+      color: #95989A;
+      margin-bottom: 0; }
     .otherProjects .otherProject p {
       font-size: .9em;
       margin-top: 0;
@@ -92,7 +95,9 @@
     width: 25%;
     float: left;
     margin: 2em 4.1666%;
-    background-color: transparent; } }
+    background-color: transparent; }
+    .otherProjects .otherProject h4, .otherProjects .otherProject p {
+      color: #4A606E; } }
 @media only screen and (min-width: 1280px) {
   .projectContainer {
     margin-top: 1em; }

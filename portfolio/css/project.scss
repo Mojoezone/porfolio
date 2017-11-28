@@ -14,6 +14,7 @@ $bgColor: #f9f9f9;
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
+
 //...........................single project....................................
 .projectContainer {
     .pTitleContainer {
@@ -28,7 +29,7 @@ $bgColor: #f9f9f9;
                 width: 60%;
                 padding: 1em;
             }
-            a[href='http://mojoezone.com/GoblinExile/goblinExile.html']{
+            a[href='http://mojoezone.com/GoblinExile/goblinExile.html'] {
                 color: $mainColor;
             }
         }
@@ -84,6 +85,10 @@ $bgColor: #f9f9f9;
                 @include border-radius(13px);
             }
         }
+        h4 {
+            color: $mainColor;
+            margin-bottom: 0;
+        }
         p {
             font-size: .9em;
             margin-top: 0;
@@ -94,10 +99,9 @@ $bgColor: #f9f9f9;
 }
 
 //............................end single project................................
-
 //............................media query ..............................
 @media only screen and (min-width: 768px) {
-   //.................project.............
+    //.................project.............
     .projectContainer {
         .pTitleContainer {
             min-height: 26.5em;
@@ -127,12 +131,14 @@ $bgColor: #f9f9f9;
             float: left;
             margin: 2em 4.1666%;
             background-color: transparent;
+            h4, p{
+                color: $myColor;
+            }
         }
     }
-} 
-   //...........................................media 1280px.........................................
-@media only screen and (min-width: 1280px){
-      
+} //...........................................media 1280px.........................................
+@media only screen and (min-width: 1280px) {
+
     //.................project.............
     .projectContainer {
         margin-top: 1em;
@@ -143,18 +149,16 @@ $bgColor: #f9f9f9;
                 width: 40%;
                 margin-right: 10%;
                 font-size: 3em;
-                img[src="images/fashionFamily.svg"]{
+                img[src="images/fashionFamily.svg"] {
                     width: 70%;
-                }
-                //                 float: right;
+                } //                 float: right;
                 //                 padding-top: 2em;
                 //                img[src="images/bikeshop.svg"], img[src="images/shield.svg"] {
                 //                    width: 50%;
                 //                }
             }
             .singlePIMG {
-                width: 40%;
-                //                float: left;
+                width: 40%; //                float: left;
                 padding: 5% 5%;
                 margin-left: 5%;
             }
@@ -164,4 +168,3 @@ $bgColor: #f9f9f9;
         }
     }
 }
-
