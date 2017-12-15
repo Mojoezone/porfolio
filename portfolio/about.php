@@ -61,10 +61,10 @@ include('header.php');
             <div class="aniResume">
                 <h4>About This Website:</h4>
                 <ul>
-                    <li>Language used
+                    <li>Technologies
                         <p>Vanilla Javascript, custome css, html, PHP and MYSQL</p>
                     </li>
-                    <li>Design and develop
+                    <li>Design and Develop
                         <p>Responsive first designed and developed. Documented in my Github repository.</p>
                         
                     </li>
