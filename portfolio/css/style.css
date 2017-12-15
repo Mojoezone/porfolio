@@ -212,7 +212,7 @@ main {
   .tabletOpen {
     color: #95989A;
     width: 30%;
-    height: 100%;
+    padding-bottom: 56.8%;
     background-color: #4A606E;
     border-left: 1px solid rgba(149, 152, 154, 0.5);
     position: absolute;
@@ -243,10 +243,9 @@ main {
     width: 70%; }
 
   .footerNav {
-    width: 60%; }
+    width: 50%; }
 
   .footerNav > li {
-    display: inline-block;
     padding-left: 1.5em; }
 
   .footerNav > li ul > li {
@@ -339,7 +338,10 @@ main {
   .introContainer h3 {
     margin-bottom: 1em; }
   .introContainer .mBContainer {
-    margin-top: 5em; } }
+    margin-top: 5em; }
+
+  .footerNav > li {
+    display: inline-block; } }
 @media only screen and (max-width: 736px) and (orientation: landscape) {
   #mainNavContainer .mainNav {
     margin-left: 4.5em;

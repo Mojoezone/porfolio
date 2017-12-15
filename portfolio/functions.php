@@ -47,7 +47,7 @@ function project(){
     }
     ?>
         <div class="singlePIMG">
-            <a href="<?php echo $row['p_url']; ?>">
+            <a href="<?php echo $row['p_url']; ?>" target="_blank">
                 <picture>
                     <source media="(min-width: 1280px)" srcset="<?php echo $row['p_d_image']; ?>"><img src="<?php if(!$row['p_m_image']){ echo $row['p_d_image'];}else{echo $row['p_m_image'];} ?>" alt="<?php echo $row['p_name']; ?>"></picture>
             </a>

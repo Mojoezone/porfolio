@@ -287,7 +287,7 @@ main {
     .tabletOpen {
         color: $mainColor;
         width: 30%;
-        height: 100%;
+        padding-bottom: 56.8%;
         background-color: $myColor;
         border-left:1px solid rgba($mainColor, .5);
         position: absolute;
@@ -324,10 +324,10 @@ main {
         width: 70%;
     } //....................footer............
     .footerNav {
-        width: 60%;
+        width: 50%;
     }
     .footerNav > li {
-        display: inline-block;
+        // display: block;
         padding-left: 1.5em;
     }
     .footerNav > li ul > li {
@@ -438,7 +438,10 @@ main {
         }
     }
 
-
+    .footerNav > li {
+        display: inline-block;
+        // padding-left: 1.5em;
+    }
 }
 
 //............................................end media query 1280px .............................

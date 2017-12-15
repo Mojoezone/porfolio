@@ -79,6 +79,7 @@
                  document.getElementById("mainNavContainer").style.display = "none";
                  bodyTag.remove("bodyWidth");
                  mobileMenu.style.display = "block";
+                 
              }
          } else {
              stickyHeader.classList.remove("stickyNav");
@@ -104,11 +105,18 @@
 //     if(x){
 //       console.log("yes");  
 //     }
-        var x = window.addEventListener("scroll", scrollDetection);
+        // var x = window.addEventListener("scroll", scrollDetection);
      //.................detect scroll action.....
 
      //get the current value of x, and the current x value - the past value,
-     window.addEventListener("scroll", scrollDetection);
+     var timer;
+     window.addEventListener("scroll", function(){
+         timer = setTimeout(function(){
+            clearTimeout(timer);
+            scrollDetection();
+         }, 10000);
+         scrollDetection();
+        });
 
      //..............end checking width............
      //     eventhandler(mobileMenu, "click", menuTrigger);

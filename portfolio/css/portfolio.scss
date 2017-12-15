@@ -18,7 +18,7 @@ $bgColor: #f9f9f9;
 .portfolioContainer {
     .plogoContainer {
         width: 100%;
-        background-color: $myColor;
+        border: 1px solid $myColor;
         margin: 5em 0;
         text-align: center;
         padding-top: .5em;
@@ -29,7 +29,7 @@ $bgColor: #f9f9f9;
             margin-top: 1em;
             a {
                 font-size: 1.5em;
-                color: $mainColor;
+                color: $myColor;
                 img {
                     width: 100%;
                     height: auto;
@@ -54,7 +54,7 @@ $bgColor: #f9f9f9;
     }
     .pLanguage {
         font-size: .9em;
-        color: $textWhite;
+        color: $myColor;
         line-height: 2em;
         padding-bottom: 1em;
     }
