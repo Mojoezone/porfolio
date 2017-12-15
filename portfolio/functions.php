@@ -64,7 +64,7 @@ function project(){
         <h3>Objective</h3>
         <p>'.$row['p_objective'].'</p>
         
-        <h3>Language</h3>
+        <h3>Technologies</h3>
         <p>'.$row['p_language'].'</p>
         
         <h3>Problem</h3>
