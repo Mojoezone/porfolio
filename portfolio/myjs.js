@@ -2,16 +2,16 @@
  (function () {
      //.........mobile nav ............
      //.........vars..........
-     var mobileMenu = document.getElementById("mobileMenu");
-     var mainNavContainer = document.getElementById("mainNavContainer").classList;
-     var mobileClose = document.getElementById("mobileClose");
-     var openSubNav = document.getElementById("openSubNav");
-     var subNav = document.getElementsByClassName("subNav")[0];
-     var bodyTag = document.getElementsByTagName("body")[0].classList;
+    let mobileMenu = document.getElementById("mobileMenu");
+    let mainNavContainer = document.getElementById("mainNavContainer").classList;
+    let mobileClose = document.getElementById("mobileClose");
+    let openSubNav = document.getElementById("openSubNav");
+    let subNav = document.getElementsByClassName("subNav")[0];
+    let bodyTag = document.getElementsByTagName("body")[0].classList;
      //..............escape key................
 
-     function escapeKey(e) {
-         if (mainNavContainer.contains == "mobileOpen" || e.keyCode == 27) {
+     const escapeKey = (event) => {
+         if (mainNavContainer.contains == "mobileOpen" || event.keyCode == 27) {
              mainNavContainer.remove("mobileOpen");
              mainNavContainer.remove("tabletOpen");
              document.getElementById("mainNavContainer").style.display = "none";
@@ -28,13 +28,13 @@
      //..........browser width for media query......
 
 
-     var winWidth;
-     var winHeight;
-     var docHeight;
+     let winWidth;
+     let winHeight;
+     let docHeight;
 
      //     eventhandler(window, "resize", windowResize);
 
-     function windowResize(e) {
+     const windowResize = (event) => {
          winWidth = window.innerWidth;
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight || document.documentElement.clientHeight;
@@ -50,7 +50,7 @@
      }
      window.addEventListener("resize", windowResize);
 
-     function windowLoad(e) {
+    const windowLoad = (event) => {
          winWidth = window.innerWidth;
          winHeight = window.innerHeight;
          docHeight = document.body.clientHeight || document.documentElement.clientHeight;
@@ -59,14 +59,14 @@
 
 
      //........stickyNav.......
-     var stickyHeader = document.getElementById("stickyHeader");
-     var stickyOffset = stickyHeader.offsetTop;
-     var imgToggle = document.getElementById("imgToggle");
+     let stickyHeader = document.getElementById("stickyHeader");
+     let stickyOffset = stickyHeader.offsetTop;
+     let imgToggle = document.getElementById("imgToggle");
 
      //....check if document height has more than 100 px than the viewport height...
      //     eventhandler(window, "scroll", scrollDetection);
 
-     function scrollDetection(e) {
+     const scrollDetection = (event) => {
          if (docHeight >= winHeight + 300 && stickyOffset < window.pageYOffset) {
              imgToggle.src = "images/logoFaded.png";
              stickyHeader.classList.add("stickyNav");
@@ -109,19 +109,24 @@
      //.................detect scroll action.....
 
      //get the current value of x, and the current x value - the past value,
-     var timer;
-     window.addEventListener("scroll", function(){
-         timer = setTimeout(function(){
+     //1-2-2018 call scroll detection than set the stickyheader to hide in 10s, clear the timer again if scroll.
+    let timer;
+    function stickyTimer(){
+        window.addEventListener("scroll", function(){
             clearTimeout(timer);
             scrollDetection();
+         timer = setTimeout(function(){
+            stickyHeader.classList.remove("stickyNav");
+            stickyHeader.classList.remove("dstickyNav");
          }, 10000);
-         scrollDetection();
+         
         });
-
+    }
+    stickyTimer();
      //..............end checking width............
      //     eventhandler(mobileMenu, "click", menuTrigger);
 
-     function menuTrigger(e) {
+     const menuTrigger = (event) => {
          if (winWidth >= 1280) {
              mobileMenu.style.display = "none";
          } else if (winWidth <= 1280 && winWidth >= 768) {
@@ -139,9 +144,9 @@
      mobileMenu.addEventListener("click", menuTrigger);
 
 
-     mobileClose.addEventListener("click", mobileX);
+     
 
-     function mobileX(e) {
+     const mobileX = (event) => {
          mainNavContainer.remove("mobileOpen");
          document.getElementById("mainNavContainer").style.display = "none";
          //             mnc;
@@ -151,9 +156,10 @@
          bodyTag.remove("bodyWidth");
          mobileMenu.style.display = "block";
      }
+     mobileClose.addEventListener("click", mobileX);
      //..............submenu................
 
-     function toggleSubNav(e) {
+     const toggleSubNav = (event) => {
          if (!this.classList.contains('rotateClass')) {
              this.classList.add('rotateClass');
              subNav.style.display = "block";
@@ -170,11 +176,12 @@
      //...............end mobile nav ................
 
      //..................copy right year and greeting...................
-     var currentDate = new Date();
-     var currentHours = currentDate.getHours();
-     var currentYear = currentDate.getFullYear();
-     var greeting = document.getElementById("greeting");
+     let currentDate = new Date();
+     let currentHours = currentDate.getHours();
+     let currentYear = currentDate.getFullYear();
+     let greeting = document.getElementById("greeting");
 
+function greetingHome(){
      if (greeting) {
          document.getElementById("greeting").innerHTML = checkHours();
      }
@@ -183,7 +190,8 @@
      } else {
          document.getElementById("currentYear").innerHTML = 2017 + "-" + currentYear;
      }
-
+    }
+    greetingHome();
      function checkHours() {
          if (currentHours >= 17 && currentHours <= 24) {
              return "Good Evening!";
