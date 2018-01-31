@@ -17,7 +17,7 @@ include('header.php');
             <div class="aniResume">
                 <h4>Education:</h4>
                 <ul>
-                    <li>Platt College San Diego 2015-2017
+                    <li>Platt College San Diego 2018
                         <p>BACHELOR OF SCIENCE MEDIA ARTS - WEB DESIGN AND DEVELOPING </p>
                     </li>
                     <li>Codecademy
@@ -49,7 +49,7 @@ include('header.php');
                 <h4>Employment History:</h4>
                 <ul>
                     <li>TFE at MK DESISIONING SYSTEMS, LLC
-                        <p> Duties are added Bootstrap and learned the structures Ofbiz, make a barebone website structure with Spike, developed a landing page for the Church</p> 
+                        <p>Duties are added Bootstrap and learned the structures Ofbiz, make a barebone website structure with Spike, developed a landing page for the Church</p> 
                         <p>09/18/2017 - 12/15/2017</p>
                     </li>
                     <li>Others
