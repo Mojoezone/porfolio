@@ -17,7 +17,7 @@ include("header.php");
                <input type="text" name="name" placeholder="<?php if($nameErr){ echo $nameErr;}else{ echo 'Name';} ?> " autofocus  />
                <input type="text" name="email" placeholder="<?php if($emailErr){ echo $emailErr;}else{ echo 'Email';} ?>"  />
                <textarea name="comment" maxlength="1000" placeholder="<?php if($commentErr){ echo $commentErr;}else{ echo 'Message me.....';} ?>"></textarea>
-               <input class="button" type="submit" name="submit" value="Send">
+               <input class="button" type="submit" name="submit" value="Hire Me">
             </form>
         </div>
 

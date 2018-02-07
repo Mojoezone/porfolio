@@ -10,14 +10,14 @@ include('header.php');
             <small>Tim Notke</small></blockquote>
 
         <div class="aboutSummery">
-            <h3>Project Process</h3>
-            <p><strong>Define, Design, Develop, Debug and Deliver on time for all projects.</strong> Define by research, sketch on paper and Design in Xd/PSD/ browser/AI, Develop in HTML5, CSS3/bootstrap, Javascript/jQuery, PHP and MYSQL, Debug in devices and modern browsers, Deliver to you.</p>
+            <h3>Objective</h3>
+            <p>Creative and dependable Entry Level Frontend Web Developer and Designer with a superb work ethic. Willing to learn new technologies and obtain a career for a professional rewarding company.</p>
         </div>
         <div id="resumeContainer">
             <div class="aniResume">
                 <h4>Education:</h4>
                 <ul>
-                    <li>Platt College San Diego 2018
+                    <li>Platt College San Diego Feb 15, 2018
                         <p>BACHELOR OF SCIENCE MEDIA ARTS - WEB DESIGN AND DEVELOPING </p>
                     </li>
                     <li>Codecademy
@@ -31,17 +31,17 @@ include('header.php');
             <div class="aniResume">
                 <h4>Skills:</h4>
                 <ul>
-                    <li>Proficient
-                        <p>HTML, CSS, Responsive, Bootscrap</p>
+                    <li>Proficient in
+                        <p>HTML, CSS, Responsive, Bootstrap</p>
                     </li>
-                    <li>Familliar
-                        <p>Spike, Javascript, jQuery, PHP, MySQL, Wordpress, Ofbiz Visual Theme, Sass, Git, Github, UI and UX</p>
+                    <li>Familliar in
+                        <p>Spike, Javascript, jQuery, PHP, MySQL, Wordpress, UI and UX</p>
                     </li>
-                    <li>Experienced
-                        <p>Node, XML, FTL</p>
+                    <li>Experience in
+                        <p>Node JS, React JS, ES2016, Ofbiz Visual Theme</p>
                     </li>
                     <li>Programs:
-                        <p>Visual Studio, Atom, Brackets, Xd, Photoshop, AI, Indesign</p>
+                        <p>Visual Studio, Sass, Git, Github, Atom, Brackets, Xd, Photoshop, AI, Indesign</p>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@ include('header.php');
                 <h4>Employment History:</h4>
                 <ul>
                     <li>TFE at MK DESISIONING SYSTEMS, LLC
-                        <p>Duties are added Bootstrap and learned the structures Ofbiz, make a barebone website structure with Spike, developed a landing page for the Church</p> 
+                        <p>Duties were adding Bootstrap and learning the structures Ofbiz, made a barebone website structure with Spike, developed a landing page for the church website</p> 
                         <p>09/18/2017 - 12/15/2017</p>
                     </li>
                     <li>Others
@@ -62,7 +62,7 @@ include('header.php');
                 <h4>About This Website:</h4>
                 <ul>
                     <li>Technologies
-                        <p>Vanilla Javascript, custome css, html, PHP and MYSQL</p>
+                        <p>Vanilla Javascript, Costumed CSS, HTML, PHP and MYSQL</p>
                     </li>
                     <li>Design and Develop
                         <p>Responsive first designed and developed. Documented in my <a href="https://github.com/Mojoezone" target="_blank">Github repository</a>.</p>

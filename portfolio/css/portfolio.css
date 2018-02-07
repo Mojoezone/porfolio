@@ -19,6 +19,8 @@
       .portfolioContainer .plogoContainer h3 a img {
         width: 100%;
         height: auto; }
+.portfolioContainer .plogoContainer:hover {
+  background-color: #95989A; }
 .portfolioContainer .plogoContainer:nth-child(even) h3 {
   padding: 3em 0; }
   .portfolioContainer .plogoContainer:nth-child(even) h3 img {
