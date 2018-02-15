@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     
       if(!$nameErr && !$emailErr && !$commentErr){
-                $to = 'mojoezone@gmail.com';
+                $to = 'joemo@mojoezone.com';
                 $subject = 'Message from portfolio';
                 $header = "From: ".$email;
                 mail($to, $subject, $comment, $header);

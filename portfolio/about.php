@@ -38,7 +38,7 @@ include('header.php');
                         <p>Spike, Javascript, jQuery, PHP, MySQL, Wordpress, UI and UX</p>
                     </li>
                     <li>Experience in
-                        <p>Node JS, React JS, ES2016, Ofbiz Visual Theme</p>
+                        <p>Ofbiz Visual Theme</p>
                     </li>
                     <li>Programs:
                         <p>Visual Studio, Sass, Git, Github, Atom, Brackets, Xd, Photoshop, AI, Indesign</p>
@@ -49,12 +49,12 @@ include('header.php');
                 <h4>Employment History:</h4>
                 <ul>
                     <li>TFE at MK DESISIONING SYSTEMS, LLC
-                        <p>Duties were adding Bootstrap and learning the structures Ofbiz, made a barebone website structure with Spike, developed a landing page for the church website</p> 
+                        <p>Were able to add Bootstrap and learn the structures Ofbiz, created a barebone website structure and developed a landing page with Spike for a church</p> 
                         <p>09/18/2017 - 12/15/2017</p>
                     </li>
                     <li>Others
-                        <p>2 year as driver Uber and Lyft 2015 - 2017</p>
-                        <p>10 plus years in restaurant business</p>
+                        <p>2 year as Uber and Lyft driver 2015 - 2017</p>
+                        <p>Years of experience in restaurant field</p>
                     </li>
                 </ul>
             </div>
