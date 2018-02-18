@@ -281,11 +281,17 @@ main {
 }
 
 //......................animation................
-//#animationJob{
-//    display: none;
-//    transition: display .2s easy-in-out;
-//}
-
+.animationJob{
+    transition: rotateText .2s easy-in-out;
+}
+@keyframe rotateText{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 //............................... end main home.........................
 //............................media query ..............................
 @media only screen and (min-width: 768px) {
