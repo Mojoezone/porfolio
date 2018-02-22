@@ -10,20 +10,26 @@ var circumferencePix;
 var getCircumference =  Math.floor(circumferencePix = 2*pi*radiusWidth);
 var spaceText = Math.floor(getCircumference/animationJobText.length); 
 var getDeg = 360/(animationJobText.length);
+var currentDeg = 0;
 //const setDeg =()=> textAnimation[''].style.transform ='rotate('+getDeg+'deg)';
 
 
 
 
 function inputTextAnimation () {
+    
     //only shown the last str if the on par because it finished before the settimeout, * the index for each str
            textAnimation.forEach(function(obj, index){
                setTimeout(function(){
-                   animationJob.innerHTML += obj;
-                   //animationJob.style.letterSpacing = spaceText + 'px';
+                   animationJob.innerHTML += textAnimation[index];
+                   animationJob.style.letterSpacing = spaceText/index + 'px';
                    //index + 1 to set it equal to 360 deg because the index array is 0-35
-                   animationJob.style.transform = 'rotate('+getDeg*(index+1)+'deg)';  
-                 }, 150*index);  
+                   animationJob.style.transform = 'rotateX('+currentDeg*(index+1)+'deg)';
+                   animationJob.style.transform = 'rotateY('+currentDeg*(index+1)+'deg)';
+                   currentDeg += getDeg;
+                   //animationJob.style.fontSize = currentDeg/37 + 'px';
+                   animationJob.style.fontSize = currentDeg/15 + 'px';
+                 }, 100*index);  
               }); 
     }
 
